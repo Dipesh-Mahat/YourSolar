@@ -1,0 +1,348 @@
+/* Energy dashboard grid */
+.energy-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  grid-template-areas:
+    "overview overview daily"
+    "hourly consumption daily"
+    "comparison comparison bills"
+    "comparison comparison bills";
+}
+
+.energy-overview {
+  grid-area: overview;
+}
+
+.daily-production {
+  grid-area: daily;
+}
+
+.hourly-production {
+  grid-area: hourly;
+}
+
+.consumption-analysis {
+  grid-area: consumption;
+}
+
+.energy-comparison {
+  grid-area: comparison;
+}
+
+.energy-bills {
+  grid-area: bills;
+}
+
+/* Energy metrics */
+.energy-metrics {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.metric-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.metric-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metric-icon.generation {
+  background-color: rgba(255, 193, 7, 0.2);
+}
+
+.metric-icon.generation i {
+  color: #ffc107;
+}
+
+.metric-icon.consumption {
+  background-color: rgba(33, 150, 243, 0.2);
+}
+
+.metric-icon.consumption i {
+  color: #2196f3;
+}
+
+.metric-icon.export {
+  background-color: rgba(76, 175, 80, 0.2);
+}
+
+.metric-icon.export i {
+  color: #4caf50;
+}
+
+.metric-icon i {
+  font-size: 24px;
+}
+
+.metric-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-label {
+  font-size: 14px;
+  color: #555;
+}
+
+.metric-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 5px 0;
+}
+
+.metric-trend {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.metric-trend.positive {
+  color: var(--accent-color);
+}
+
+.metric-trend.negative {
+  color: #f44336;
+}
+
+/* Chart containers */
+.energy-chart-container,
+.daily-chart-container,
+.hourly-chart-container,
+.consumption-chart-container,
+.comparison-chart-container,
+.savings-chart-container {
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+/* Production stats */
+.production-stats,
+.hourly-stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat-date,
+.stat-time,
+.stat-progress {
+  display: block;
+  font-size: 12px;
+  color: #777;
+  margin-top: 3px;
+}
+
+/* Consumption breakdown */
+.consumption-breakdown {
+  margin-top: 20px;
+}
+
+.consumption-breakdown h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: var(--text-dark);
+}
+
+.breakdown-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.breakdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.color-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.breakdown-label {
+  width: 100px;
+  font-size: 14px;
+  color: #555;
+}
+
+.breakdown-bar {
+  flex: 1;
+  height: 8px;
+  background-color: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.breakdown-progress {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+}
+
+.breakdown-percentage {
+  width: 40px;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Comparison toggle */
+.comparison-toggle {
+  display: flex;
+  gap: 10px;
+}
+
+.comparison-toggle span {
+  font-size: 12px;
+  color: #888;
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.comparison-toggle span:hover {
+  color: var(--secondary-color);
+}
+
+.comparison-toggle span.active {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+/* Comparison insights */
+.comparison-insights {
+  margin-top: 20px;
+}
+
+.insight-item {
+  display: flex;
+  gap: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.insight-item:last-child {
+  border-bottom: none;
+}
+
+.insight-item i {
+  color: var(--primary-color);
+  font-size: 20px;
+  margin-top: 3px;
+}
+
+.insight-content h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: var(--text-dark);
+}
+
+.insight-content p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Date display */
+.date-display {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.date-display i {
+  color: var(--secondary-color);
+}
+
+/* Savings summary */
+.savings-summary {
+  margin-top: 20px;
+}
+
+.summary-item {
+  display: flex;
+  gap: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.summary-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(76, 175, 80, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.summary-icon i {
+  color: var(--accent-color);
+  font-size: 20px;
+}
+
+.summary-details h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: var(--text-dark);
+}
+
+.summary-details p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .energy-dashboard-grid {
+    grid-template-areas:
+      "overview daily"
+      "hourly consumption"
+      "comparison comparison"
+      "bills bills";
+  }
+}
+
+@media (max-width: 768px) {
+  .energy-dashboard-grid {
+    grid-template-areas:
+      "overview"
+      "daily"
+      "hourly"
+      "consumption"
+      "comparison"
+      "bills";
+  }
+  
+  .energy-metrics {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .production-stats,
+  .hourly-stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+} 

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Dashboard | YourSolar</title>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="div">
+        <div class="sidebar">
+          <div class="logo">
+            <a href="index.html">
+              <div class="logo-content">
+                <i class="fas fa-solar-panel"></i>
+                <span>YourSolar</span>
+              </div>
+            </a>
+          </div>
+          <div class="menu">
+            <a href="#" class="menu-item active">
+              <i class="fas fa-tachometer-alt"></i>
+              <span>Dashboard</span>
+            </a>
+            <a href="energy.html" class="menu-item">
+              <i class="fas fa-bolt"></i>
+              <span>Energy</span>
+            </a>
+            <a href="battery.html" class="menu-item">
+              <i class="fas fa-battery-full"></i>
+              <span>Battery</span>
+            </a>
+            <a href="weather.html" class="menu-item">
+              <i class="fas fa-cloud-sun"></i>
+              <span>Weather</span>
+            </a>
+            <a href="profile.html" class="menu-item">
+              <i class="fas fa-user"></i>
+              <span>Profile</span>
+            </a>
+            <a href="#" class="menu-item">
+              <i class="fas fa-cog"></i>
+              <span>Settings</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="main-content">
+          <div class="header">
+            <div class="page-title">
+              <h1>Dashboard</h1>
+              <p>Welcome back! Here's your solar system overview</p>
+            </div>
+            <div class="user-menu">
+              <div class="status">
+                <div class="status-indicator online"></div>
+                <span>Status: Available</span>
+              </div>
+              <div class="user-profile">
+                <img src="assets/images/profile-image.jpg" alt="User Profile" />
+                <div class="user-dropdown">
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard-grid">
+            <div class="card estimated-savings">
+              <div class="card-header">
+                <h2>Estimated Savings</h2>
+                <div class="period-selector">
+                  <span class="active">Day</span>
+                  <span>Week</span>
+                  <span>Month</span>
+                  <span>Year</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="savings-amount">
+                  <h3>NPR 2,500</h3>
+                  <span class="trend positive">
+                    <i class="fas fa-arrow-up"></i> 33% more than previous month
+                  </span>
+                </div>
+                <div class="savings-chart">
+                  <canvas id="savingsChart"></canvas>
+                </div>
+              </div>
+              <div class="past-savings">
+                <h4>Past Months Saving</h4>
+                <div class="savings-list">
+                  <div class="savings-item">
+                    <span class="month">March</span>
+                    <span class="amount">NPR 5,000</span>
+                  </div>
+                  <div class="savings-item">
+                    <span class="month">February</span>
+                    <span class="amount">NPR 4,500</span>
+                  </div>
+                  <div class="savings-item">
+                    <span class="month">January</span>
+                    <span class="amount">NPR 4,000</span>
+                  </div>
+                  <div class="savings-item">
+                    <span class="month">December</span>
+                    <span class="amount">NPR 6,000</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card energy-generation">
+              <div class="card-header">
+                <h2>Energy Generation & Consumption</h2>
+                <div class="period-selector">
+                  <span>Day</span>
+                  <span class="active">Week</span>
+                  <span>Month</span>
+                  <span>Year</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="energy-stats">
+                  <div class="stat-item">
+                    <span class="label">Generation</span>
+                    <span class="value">45 kWh</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="label">Consumption</span>
+                    <span class="value">38 kWh</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="label">Net</span>
+                    <span class="value positive">+7 kWh</span>
+                  </div>
+                </div>
+                <div class="energy-chart">
+                  <canvas id="energyChart"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="card battery-details">
+              <div class="card-header">
+                <h2>Battery Details</h2>
+                <div class="period-selector">
+                  <span>Day</span>
+                  <span class="active">Week</span>
+                  <span>Month</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="battery-status">
+                  <div class="battery-icon">
+                    <i class="fas fa-battery-three-quarters"></i>
+                    <span class="percentage">75%</span>
+                  </div>
+                  <div class="battery-info">
+                    <div class="info-item">
+                      <span class="label">Status</span>
+                      <span class="value">Charging</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="label">Power</span>
+                      <span class="value">1.2 kW</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="label">Estimated Full</span>
+                      <span class="value">2 hrs</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="battery-chart">
+                  <canvas id="batteryChart"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="card weather-condition">
+              <div class="card-header">
+                <h2>Weather Condition</h2>
+                <div class="location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Kathmandu, Nepal</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="current-weather">
+                  <div class="weather-icon">
+                    <i class="fas fa-sun"></i>
+                  </div>
+                  <div class="weather-details">
+                    <div class="temperature">28°C</div>
+                    <div class="condition">Sunny</div>
+                  </div>
+                </div>
+                <div class="weather-stats">
+                  <div class="stat-item">
+                    <i class="fas fa-tint"></i>
+                    <span class="label">Humidity</span>
+                    <span class="value">45%</span>
+                  </div>
+                  <div class="stat-item">
+                    <i class="fas fa-wind"></i>
+                    <span class="label">Wind</span>
+                    <span class="value">8 km/h</span>
+                  </div>
+                  <div class="stat-item">
+                    <i class="fas fa-sun"></i>
+                    <span class="label">UV Index</span>
+                    <span class="value">6 (High)</span>
+                  </div>
+                </div>
+                <div class="forecast">
+                  <div class="forecast-item">
+                    <div class="day">Mon</div>
+                    <i class="fas fa-sun"></i>
+                    <div class="temp">30°C</div>
+                  </div>
+                  <div class="forecast-item">
+                    <div class="day">Tue</div>
+                    <i class="fas fa-cloud-sun"></i>
+                    <div class="temp">28°C</div>
+                  </div>
+                  <div class="forecast-item">
+                    <div class="day">Wed</div>
+                    <i class="fas fa-cloud"></i>
+                    <div class="temp">25°C</div>
+                  </div>
+                  <div class="forecast-item">
+                    <div class="day">Thu</div>
+                    <i class="fas fa-cloud-rain"></i>
+                    <div class="temp">22°C</div>
+                  </div>
+                  <div class="forecast-item">
+                    <div class="day">Fri</div>
+                    <i class="fas fa-cloud-sun"></i>
+                    <div class="temp">26°C</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card recommendation-AI">
+              <div class="card-header">
+                <h2>AI Recommendation</h2>
+                <div class="ai-badge">
+                  <i class="fas fa-robot"></i>
+                  <span>Powered by AI</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="recommendation-item">
+                  <div class="icon">
+                    <i class="fas fa-lightbulb"></i>
+                  </div>
+                  <div class="content">
+                    <h4>Reduce Peak Hour Usage</h4>
+                    <p>Shifting your washing machine and dishwasher usage to non-peak hours could save you approximately NPR 800 this month.</p>
+                  </div>
+                </div>
+                <div class="recommendation-item">
+                  <div class="icon">
+                    <i class="fas fa-solar-panel"></i>
+                  </div>
+                  <div class="content">
+                    <h4>Panel Cleaning Due</h4>
+                    <p>Your solar panels might need cleaning. Current efficiency is 92%, which is 4% lower than last month.</p>
+                  </div>
+                </div>
+                <div class="recommendation-item">
+                  <div class="icon">
+                    <i class="fas fa-battery-full"></i>
+                  </div>
+                  <div class="content">
+                    <h4>Battery Optimization</h4>
+                    <p>Adjusting your battery settings to store more energy for evening use could improve your savings by 15%.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card AI-prediction">
+              <div class="card-header">
+                <h2>AI Prediction</h2>
+                <div class="ai-badge">
+                  <i class="fas fa-chart-line"></i>
+                  <span>Forecasting</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="prediction-chart">
+                  <canvas id="predictionChart"></canvas>
+                </div>
+                <div class="prediction-insights">
+                  <h4>Energy Production Forecast</h4>
+                  <p>Based on weather forecasts and your system's historical performance, we predict you'll generate approximately <strong>42 kWh</strong> tomorrow, which is <span class="positive">+5%</span> above your daily average.</p>
+                  <h4>Monthly Savings Prediction</h4>
+                  <p>Your estimated savings for this month is <strong>NPR 5,800</strong>, which is <span class="positive">+16%</span> more than last month.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Sample chart initializations
+      document.addEventListener('DOMContentLoaded', function() {
+        // Savings Chart
+        const savingsCtx = document.getElementById('savingsChart').getContext('2d');
+        const savingsChart = new Chart(savingsCtx, {
+          type: 'line',
+          data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [{
+              label: 'Monthly Savings (NPR)',
+              data: [4100, 4500, 4000, 6000, 5500, 3000, 3500, 4200, 4800, 5200, 4700, 5000],
+              borderColor: '#ffc107',
+              backgroundColor: 'rgba(255, 193, 7, 0.1)',
+              tension: 0.4,
+              fill: true
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                display: false
+              }
+            },
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+
+        // Energy Chart
+        const energyCtx = document.getElementById('energyChart').getContext('2d');
+        const energyChart = new Chart(energyCtx, {
+          type: 'bar',
+          data: {
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            datasets: [
+              {
+                label: 'Generation (kWh)',
+                data: [42, 38, 45, 50, 55, 60, 58],
+                backgroundColor: '#ffc107'
+              },
+              {
+                label: 'Consumption (kWh)',
+                data: [38, 36, 40, 45, 48, 50, 47],
+                backgroundColor: '#2196f3'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+
+        // Battery Chart
+        const batteryCtx = document.getElementById('batteryChart').getContext('2d');
+        const batteryChart = new Chart(batteryCtx, {
+          type: 'line',
+          data: {
+            labels: ['12AM', '3AM', '6AM', '9AM', '12PM', '3PM', '6PM', '9PM'],
+            datasets: [{
+              label: 'Battery Level (%)',
+              data: [90, 85, 75, 60, 45, 60, 85, 95],
+              borderColor: '#4caf50',
+              backgroundColor: 'rgba(76, 175, 80, 0.1)',
+              tension: 0.4,
+              fill: true
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                display: false
+              }
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 100
+              }
+            }
+          }
+        });
+
+        // Prediction Chart
+        const predictionCtx = document.getElementById('predictionChart').getContext('2d');
+        const predictionChart = new Chart(predictionCtx, {
+          type: 'line',
+          data: {
+            labels: ['Yesterday', 'Today', 'Tomorrow', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'],
+            datasets: [{
+              label: 'Actual Generation (kWh)',
+              data: [38, 40, null, null, null, null, null, null],
+              borderColor: '#2196f3',
+              backgroundColor: 'rgba(33, 150, 243, 0.1)',
+              tension: 0.4,
+              fill: true
+            },
+            {
+              label: 'Predicted Generation (kWh)',
+              data: [null, null, 42, 45, 40, 38, 42, 44],
+              borderColor: '#ff9800',
+              backgroundColor: 'rgba(255, 152, 0, 0.1)',
+              borderDash: [5, 5],
+              tension: 0.4,
+              fill: true
+            }]
+          },
+          options: {
+            responsive: true,
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

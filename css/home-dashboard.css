@@ -1,0 +1,465 @@
+/* Dashboard grid layout */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: 1.5rem;
+  grid-template-areas:
+    "savings savings savings savings energy energy energy energy battery battery battery battery"
+    "weather weather weather weather weather ai-rec ai-rec ai-rec ai-rec ai-rec ai-rec ai-rec"
+    "ai-pred ai-pred ai-pred ai-pred ai-pred ai-pred ai-pred ai-pred ai-pred ai-pred ai-pred ai-pred";
+}
+
+.estimated-savings {
+  grid-area: savings;
+}
+
+.energy-generation {
+  grid-area: energy;
+}
+
+.battery-details {
+  grid-area: battery;
+}
+
+.weather-condition {
+  grid-area: weather;
+}
+
+.recommendation-AI {
+  grid-area: ai-rec;
+}
+
+.AI-prediction {
+  grid-area: ai-pred;
+}
+
+/* Savings section */
+.savings-amount {
+  margin-bottom: 1.5rem;
+}
+
+.savings-amount h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 0.75rem 0;
+}
+
+.savings-amount .trend {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.savings-amount .trend.positive {
+  color: var(--accent-color);
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.savings-amount .trend.negative {
+  color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.savings-amount .trend i {
+  margin-right: 0.375rem;
+}
+
+.savings-chart {
+  height: 200px;
+  margin-bottom: 1.5rem;
+}
+
+.past-savings {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.past-savings h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 1rem 0;
+}
+
+.savings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.savings-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.05);
+}
+
+.savings-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.savings-item .month {
+  font-size: 0.9375rem;
+  color: #475569;
+}
+
+.savings-item .amount {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Energy section */
+.energy-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.energy-stats .stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: 0.75rem;
+  min-width: 95px;
+}
+
+.energy-stats .stat-item .label {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.energy-stats .stat-item .value {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.energy-stats .stat-item .value.positive {
+  color: var(--accent-color);
+}
+
+.energy-stats .stat-item .value.negative {
+  color: #ef4444;
+}
+
+.energy-chart {
+  height: 250px;
+}
+
+/* Battery section */
+.battery-status {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.battery-icon {
+  position: relative;
+  background-color: rgba(76, 175, 80, 0.1);
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.battery-icon i {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+}
+
+.battery-icon .percentage {
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent-color);
+  color: var(--text-light);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.battery-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.battery-info .info-item {
+  min-width: 100px;
+}
+
+.battery-info .info-item .label {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 0.25rem;
+}
+
+.battery-info .info-item .value {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.battery-chart {
+  height: 180px;
+}
+
+/* Weather section */
+.card-header .location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  color: #64748b;
+}
+
+.current-weather {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.weather-icon {
+  background-color: rgba(59, 130, 246, 0.1);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+}
+
+.weather-icon i {
+  font-size: 2.5rem;
+  color: #3b82f6;
+}
+
+.weather-details .temperature {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+.weather-details .condition {
+  font-size: 1.125rem;
+  color: #64748b;
+}
+
+.weather-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.weather-stats .stat-item {
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+}
+
+.weather-stats .stat-item i {
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.weather-stats .stat-item .label {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 0.25rem;
+}
+
+.weather-stats .stat-item .value {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forecast-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  transition: var(--hover-transition);
+}
+
+.forecast-item:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.forecast-item .day {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.forecast-item i {
+  font-size: 1.5rem;
+  color: #3b82f6;
+  margin-bottom: 0.5rem;
+}
+
+.forecast-item .temp {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* AI Recommendation section */
+.card-header .ai-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  background-color: rgba(59, 130, 246, 0.1);
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  color: #3b82f6;
+}
+
+.recommendation-item {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.recommendation-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.recommendation-item .icon {
+  background-color: rgba(59, 130, 246, 0.1);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.recommendation-item .icon i {
+  font-size: 1.25rem;
+  color: #3b82f6;
+}
+
+.recommendation-item .content h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 0.5rem 0;
+}
+
+.recommendation-item .content p {
+  font-size: 0.9375rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* AI Prediction section */
+.prediction-chart {
+  height: 250px;
+  margin-bottom: 1.5rem;
+}
+
+.prediction-insights h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 1.5rem 0 0.75rem 0;
+}
+
+.prediction-insights p {
+  font-size: 0.9375rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+}
+
+.prediction-insights .positive {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.prediction-insights .negative {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "savings savings savings savings savings savings energy energy energy energy energy energy"
+      "battery battery battery battery battery battery weather weather weather weather weather weather"
+      "ai-rec ai-rec ai-rec ai-rec ai-rec ai-rec ai-rec ai-rec ai-rec ai-rec ai-rec ai-rec"
+      "ai-pred ai-pred ai-pred ai-pred ai-pred ai-pred ai-pred ai-pred ai-pred ai-pred ai-pred ai-pred";
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "savings"
+      "energy"
+      "battery"
+      "weather"
+      "ai-rec"
+      "ai-pred";
+  }
+  
+  .energy-stats,
+  .battery-status,
+  .weather-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .energy-stats .stat-item,
+  .weather-stats .stat-item {
+    width: 100%;
+  }
+  
+  .forecast {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .forecast-item {
+    width: 30%;
+  }
+} 

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Management | YourSolar</title>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="div">
+        <div class="sidebar">
+          <div class="logo">
+            <a href="index.html">
+              <div class="logo-content">
+                <i class="fas fa-solar-panel"></i>
+                <span>YourSolar</span>
+              </div>
+            </a>
+          </div>
+          <div class="menu">
+            <a href="dashboard.html" class="menu-item">
+              <i class="fas fa-tachometer-alt"></i>
+              <span>Dashboard</span>
+            </a>
+            <a href="energy.html" class="menu-item">
+              <i class="fas fa-bolt"></i>
+              <span>Energy</span>
+            </a>
+            <a href="battery.html" class="menu-item active">
+              <i class="fas fa-battery-full"></i>
+              <span>Battery</span>
+            </a>
+            <a href="weather.html" class="menu-item">
+              <i class="fas fa-cloud-sun"></i>
+              <span>Weather</span>
+            </a>
+            <a href="profile.html" class="menu-item">
+              <i class="fas fa-user"></i>
+              <span>Profile</span>
+            </a>
+            <a href="settings.html" class="menu-item">
+              <i class="fas fa-cog"></i>
+              <span>Settings</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="main-content">
+          <div class="header">
+            <div class="page-title">
+              <h1>Battery Management</h1>
+              <p>Monitor and control your energy storage system</p>
+            </div>
+            <div class="user-menu">
+              <div class="status">
+                <div class="status-indicator online"></div>
+                <span>Status: Connected</span>
+              </div>
+              <div class="user-profile">
+                <img src="img/425167858_1304571767218968_4453930768811527763_n (1).jpg" alt="User Profile" />
+                <div class="dropdown">
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="battery-dashboard-grid">
+            <div class="card battery-status">
+              <div class="card-header">
+                <h2>Battery Status</h2>
+                <div class="real-time-indicator">
+                  <span class="pulse"></span>
+                  <span>Real-time</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="battery-visualization">
+                  <div class="battery-icon">
+                    <svg width="120" height="200" viewBox="0 0 120 200">
+                      <rect x="20" y="10" width="80" height="165" rx="8" fill="#e0e0e0" stroke="#263238" stroke-width="2"/>
+                      <rect x="40" y="0" width="40" height="15" rx="4" fill="#e0e0e0" stroke="#263238" stroke-width="2"/>
+                      <rect x="25" y="15" width="70" height="155" rx="5" fill="#ffffff"/>
+                      <rect class="battery-level" x="25" y="55" width="70" height="115" rx="3" fill="#4caf50"/>
+                      <text x="60" y="100" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">75%</text>
+                    </svg>
+                  </div>
+                  <div class="battery-info">
+                    <div class="info-grid">
+                      <div class="info-item">
+                        <span class="info-label">Status</span>
+                        <span class="info-value">Discharging</span>
+                      </div>
+                      <div class="info-item">
+                        <span class="info-label">Charge Level</span>
+                        <span class="info-value">75%</span>
+                      </div>
+                      <div class="info-item">
+                        <span class="info-label">Power</span>
+                        <span class="info-value">-2.1 kW</span>
+                      </div>
+                      <div class="info-item">
+                        <span class="info-label">Energy Available</span>
+                        <span class="info-value">7.5 kWh</span>
+                      </div>
+                      <div class="info-item">
+                        <span class="info-label">Temperature</span>
+                        <span class="info-value">28°C</span>
+                      </div>
+                      <div class="info-item">
+                        <span class="info-label">Health</span>
+                        <span class="info-value">96% <i class="fas fa-check-circle health-good"></i></span>
+                      </div>
+                    </div>
+                    <div class="estimated-runtime">
+                      <i class="fas fa-clock"></i>
+                      <span>Estimated Runtime: <strong>5.2 hours</strong> at current load</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card charge-discharge">
+              <div class="card-header">
+                <h2>Charge/Discharge History</h2>
+                <div class="period-selector">
+                  <span>Day</span>
+                  <span class="active">Week</span>
+                  <span>Month</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="charge-chart-container">
+                  <canvas id="chargeDischargeChart"></canvas>
+                </div>
+                <div class="charge-stats">
+                  <div class="stat-item">
+                    <div class="stat-icon charging">
+                      <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="stat-details">
+                      <span class="stat-label">Total Charged</span>
+                      <span class="stat-value">62.4 kWh</span>
+                    </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-icon discharging">
+                      <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="stat-details">
+                      <span class="stat-label">Total Discharged</span>
+                      <span class="stat-value">58.1 kWh</span>
+                    </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-icon efficiency">
+                      <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="stat-details">
+                      <span class="stat-label">Efficiency</span>
+                      <span class="stat-value">93.1%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card daily-cycle">
+              <div class="card-header">
+                <h2>Daily Cycle Pattern</h2>
+                <div class="date-display">
+                  <i class="fas fa-calendar-day"></i>
+                  <span>June 5, 2023</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="cycle-chart-container">
+                  <canvas id="dailyCycleChart"></canvas>
+                </div>
+                <div class="cycle-insights">
+                  <div class="insight-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <div class="insight-content">
+                      <h4>Peak Charging</h4>
+                      <p>Your battery charges most efficiently between <strong>10 AM and 2 PM</strong>, when solar production is at its peak.</p>
+                    </div>
+                  </div>
+                  <div class="insight-item">
+                    <i class="fas fa-moon"></i>
+                    <div class="insight-content">
+                      <h4>Evening Usage</h4>
+                      <p>Your battery typically supplies <strong>85%</strong> of your evening energy needs (6 PM - 10 PM).</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card battery-health">
+              <div class="card-header">
+                <h2>Battery Health</h2>
+                <div class="health-status good">
+                  <i class="fas fa-heart"></i>
+                  <span>Good Condition</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="health-metrics">
+                  <div class="metric-card">
+                    <div class="metric-circle">
+                      <svg width="120" height="120" viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="54" fill="none" stroke="#e0e0e0" stroke-width="12"/>
+                        <circle cx="60" cy="60" r="54" fill="none" stroke="#4caf50" stroke-width="12" stroke-dasharray="339.3" stroke-dashoffset="13.6"/>
+                        <text x="60" y="60" font-size="24" font-weight="bold" text-anchor="middle" alignment-baseline="middle">96%</text>
+                      </svg>
+                      <span class="metric-title">Overall Health</span>
+                    </div>
+                    <div class="metric-detail">
+                      <ul>
+                        <li>Capacity: 95%</li>
+                        <li>Charge Rate: 98%</li>
+                        <li>Discharge Rate: 97%</li>
+                        <li>Temperature: Normal</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="health-chart-container">
+                    <canvas id="healthHistoryChart"></canvas>
+                  </div>
+                </div>
+                <div class="health-recommendations">
+                  <h3>Recommendations</h3>
+                  <ul>
+                    <li><i class="fas fa-check-circle"></i> Battery is operating within optimal parameters</li>
+                    <li><i class="fas fa-info-circle"></i> Consider scheduling a maintenance check in 6 months</li>
+                    <li><i class="fas fa-thermometer-half"></i> Keep battery area well ventilated during summer months</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="card battery-settings">
+              <div class="card-header">
+                <h2>Battery Settings</h2>
+                <div class="settings-status">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Updated</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="settings-grid">
+                  <div class="setting-item">
+                    <label>Charge Mode</label>
+                    <div class="setting-control">
+                      <select>
+                        <option>Optimized (AI)</option>
+                        <option>Time-Based</option>
+                        <option>Solar Only</option>
+                        <option>Manual</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="setting-item">
+                    <label>Reserve Capacity</label>
+                    <div class="setting-control">
+                      <div class="range-slider">
+                        <input type="range" min="0" max="100" value="20">
+                        <span>20%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="setting-item">
+                    <label>Grid Charging</label>
+                    <div class="setting-control">
+                      <div class="toggle-switch">
+                        <input type="checkbox" id="gridCharging" checked>
+                        <label for="gridCharging"></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="setting-item">
+                    <label>Grid Charging Time</label>
+                    <div class="setting-control">
+                      <div class="time-range">
+                        <input type="time" value="00:00">
+                        <span>to</span>
+                        <input type="time" value="06:00">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="setting-item">
+                    <label>Backup Reserve</label>
+                    <div class="setting-control">
+                      <div class="toggle-switch">
+                        <input type="checkbox" id="backupReserve" checked>
+                        <label for="backupReserve"></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="setting-item">
+                    <label>Discharge Priority</label>
+                    <div class="setting-control">
+                      <select>
+                        <option>Evening Peak Hours</option>
+                        <option>Grid Outage Only</option>
+                        <option>Continuous Support</option>
+                        <option>Manual Control</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="settings-actions">
+                  <button class="btn btn-primary">Save Settings</button>
+                  <button class="btn btn-secondary">Restore Defaults</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card battery-insights">
+              <div class="card-header">
+                <h2>AI Insights</h2>
+                <div class="ai-badge">
+                  <i class="fas fa-robot"></i>
+                  <span>AI Powered</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="insights-list">
+                  <div class="insight-item">
+                    <div class="insight-icon">
+                      <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="insight-content">
+                      <h4>Lifecycle Optimization</h4>
+                      <p>Current usage patterns suggest your battery will maintain >80% capacity for approximately 10.2 years. Slight adjustments to your charge/discharge patterns could extend this by up to 1.5 years.</p>
+                      <a href="#" class="insight-action">View Recommendations</a>
+                    </div>
+                  </div>
+                  <div class="insight-item">
+                    <div class="insight-icon">
+                      <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="insight-content">
+                      <h4>Financial Optimization</h4>
+                      <p>By adjusting your battery discharge schedule to focus on peak rate hours (6 PM - 10 PM), you could increase your monthly savings by approximately NPR 620.</p>
+                      <a href="#" class="insight-action">Apply Recommended Settings</a>
+                    </div>
+                  </div>
+                  <div class="insight-item">
+                    <div class="insight-icon">
+                      <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="insight-content">
+                      <h4>Power Outage Preparedness</h4>
+                      <p>Based on local grid reliability data and weather forecasts, we recommend maintaining at least 40% reserve capacity over the next 3 days due to potential grid instability.</p>
+                      <a href="#" class="insight-action">Configure Backup Settings</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Charge Discharge Chart
+        const chargeDischargeCtx = document.getElementById('chargeDischargeChart').getContext('2d');
+        const chargeDischargeChart = new Chart(chargeDischargeCtx, {
+          type: 'bar',
+          data: {
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            datasets: [
+              {
+                label: 'Charged (kWh)',
+                data: [8.2, 9.1, 7.6, 10.2, 9.8, 8.5, 9.0],
+                backgroundColor: '#4caf50'
+              },
+              {
+                label: 'Discharged (kWh)',
+                data: [-7.5, -8.5, -7.2, -9.6, -9.2, -8.1, -8.0],
+                backgroundColor: '#f44336'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: 'top',
+              }
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                title: {
+                  display: true,
+                  text: 'Energy (kWh)'
+                }
+              }
+            }
+          }
+        });
+
+        // Daily Cycle Chart
+        const dailyCycleCtx = document.getElementById('dailyCycleChart').getContext('2d');
+        const dailyCycleChart = new Chart(dailyCycleCtx, {
+          type: 'line',
+          data: {
+            labels: ['12 AM', '2 AM', '4 AM', '6 AM', '8 AM', '10 AM', '12 PM', '2 PM', '4 PM', '6 PM', '8 PM', '10 PM'],
+            datasets: [
+              {
+                label: 'Battery Level (%)',
+                data: [45, 42, 39, 36, 38, 50, 68, 82, 90, 86, 75, 60],
+                borderColor: '#4caf50',
+                backgroundColor: 'rgba(76, 175, 80, 0.1)',
+                tension: 0.4,
+                fill: true,
+                yAxisID: 'y'
+              },
+              {
+                label: 'Power (kW)',
+                data: [-0.3, -0.3, -0.3, -0.2, 0.5, 2.1, 3.2, 3.5, 2.2, -1.8, -2.2, -1.5],
+                borderColor: '#2196f3',
+                backgroundColor: 'transparent',
+                borderDash: [5, 5],
+                tension: 0.4,
+                yAxisID: 'y1'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: 'top',
+              },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    let label = context.dataset.label || '';
+                    if (label === 'Power (kW)') {
+                      return label + ': ' + context.raw + ' kW (' + (context.raw > 0 ? 'Charging' : 'Discharging') + ')';
+                    }
+                    return label + ': ' + context.raw;
+                  }
+                }
+              }
+            },
+            scales: {
+              y: {
+                type: 'linear',
+                display: true,
+                position: 'left',
+                min: 0,
+                max: 100,
+                title: {
+                  display: true,
+                  text: 'Battery Level (%)'
+                }
+              },
+              y1: {
+                type: 'linear',
+                display: true,
+                position: 'right',
+                min: -4,
+                max: 4,
+                grid: {
+                  drawOnChartArea: false
+                },
+                title: {
+                  display: true,
+                  text: 'Power (kW)'
+                }
+              }
+            }
+          }
+        });
+
+        // Health History Chart
+        const healthHistoryCtx = document.getElementById('healthHistoryChart').getContext('2d');
+        const healthHistoryChart = new Chart(healthHistoryCtx, {
+          type: 'line',
+          data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [
+              {
+                label: 'Capacity Health (%)',
+                data: [100, 99, 98, 97, 96, 95],
+                borderColor: '#4caf50',
+                backgroundColor: 'transparent',
+                tension: 0.4
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                display: false
+              }
+            },
+            scales: {
+              y: {
+                min: 80,
+                max: 100,
+                title: {
+                  display: true,
+                  text: 'Health (%)'
+                }
+              }
+            }
+          }
+        });
+
+        // Range slider value display
+        const rangeSlider = document.querySelector('.range-slider input');
+        const rangeValue = document.querySelector('.range-slider span');
+        
+        rangeSlider.addEventListener('input', function() {
+          rangeValue.textContent = this.value + '%';
+        });
+      });
+    </script>
+  </body>
+</html>

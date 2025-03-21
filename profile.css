@@ -1,0 +1,480 @@
+.profile {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .profile .div {
+    background-color: #ffffff;
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+  }
+  
+  .profile .nav-bar {
+    position: absolute;
+    width: 1920px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    background-color: #7f7f7f;
+  }
+  
+  .profile .logo {
+    position: absolute;
+    width: 194px;
+    height: 60px;
+    top: 20px;
+    left: 62px;
+  }
+  
+  .profile .overlap-group {
+    position: relative;
+    width: 192px;
+    height: 60px;
+    background-color: #d9d9d9;
+  }
+  
+  .profile .text-wrapper {
+    position: absolute;
+    width: 127px;
+    top: 0;
+    left: 32px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .profile .overlap {
+    position: absolute;
+    width: 168px;
+    height: 100px;
+    top: 0;
+    left: 1752px;
+    background-color: #b9b5b5;
+  }
+  
+  .profile .male-user {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 15px;
+    left: 48px;
+  }
+  
+  .profile .vector {
+    position: absolute;
+    width: 49px;
+    height: 60px;
+    top: 20px;
+    left: 1679px;
+  }
+  
+  .profile .status {
+    position: absolute;
+    width: 348px;
+    height: 70px;
+    top: 15px;
+    left: 1261px;
+  }
+  
+  .profile .div-wrapper {
+    position: relative;
+    width: 346px;
+    height: 70px;
+    background-color: #d9d9d9;
+  }
+  
+  .profile .text-wrapper-2 {
+    position: absolute;
+    width: 268px;
+    top: 12px;
+    left: 18px;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .profile .hamburger {
+    position: absolute;
+    width: 306px;
+    height: 980px;
+    top: 100px;
+    left: 0;
+  }
+  
+  .profile .overlap-2 {
+    position: relative;
+    width: 300px;
+    height: 980px;
+    background-color: #bcbcbc;
+  }
+  
+  .profile .text-wrapper-3 {
+    position: absolute;
+    width: 158px;
+    top: 26px;
+    left: 15px;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #424242;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .profile .text-wrapper-4 {
+    position: absolute;
+    width: 122px;
+    top: 894px;
+    left: 89px;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #424242;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .profile .text-wrapper-5 {
+    position: absolute;
+    width: 201px;
+    top: 90px;
+    left: 13px;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #424242;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .profile .no-of-solar-panel {
+    position: absolute;
+    width: 402px;
+    height: 99px;
+    top: 410px;
+    left: 960px;
+  }
+  
+  .profile .rectangle {
+    position: absolute;
+    width: 400px;
+    height: 60px;
+    top: 39px;
+    left: 0;
+    background-color: #d9d9d9;
+  }
+  
+  .profile .text-wrapper-6 {
+    position: absolute;
+    width: 273px;
+    top: 0;
+    left: 0;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .profile .power-per-panel {
+    position: absolute;
+    width: 402px;
+    height: 99px;
+    top: 540px;
+    left: 960px;
+  }
+  
+  .profile .text-wrapper-7 {
+    position: absolute;
+    width: 322px;
+    top: 0;
+    left: 0;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .profile .total-investment {
+    position: absolute;
+    width: 402px;
+    height: 99px;
+    top: 660px;
+    left: 960px;
+  }
+  
+  .profile .text-wrapper-8 {
+    position: absolute;
+    width: 345px;
+    top: 0;
+    left: 0;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .profile .ROI {
+    position: absolute;
+    width: 402px;
+    height: 99px;
+    top: 774px;
+    left: 962px;
+  }
+  
+  .profile .text-wrapper-9 {
+    position: absolute;
+    width: 342px;
+    top: 0;
+    left: 0;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .profile .export {
+    position: absolute;
+    width: 268px;
+    height: 50px;
+    top: 1003px;
+    left: 1615px;
+  }
+  
+  .profile .export-data {
+    position: absolute;
+    width: 213px;
+    top: 0;
+    left: 0;
+    font-family: "Itim-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .profile .download {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 216px;
+    object-fit: cover;
+  }
+  
+  .profile .overlap-3 {
+    position: absolute;
+    width: 402px;
+    height: 135px;
+    top: 241px;
+    left: 960px;
+    background-color: #d9d9d9;
+  }
+  
+  .profile .text-wrapper-10 {
+    position: absolute;
+    top: 46px;
+    left: 20px;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .profile .text-wrapper-11 {
+    position: absolute;
+    top: 107px;
+    left: 222px;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .profile .expand-arrow {
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    top: 20px;
+    left: 299px;
+  }
+  
+  .profile .overlap-wrapper {
+    position: absolute;
+    width: 281px;
+    height: 260px;
+    top: 107px;
+    left: 375px;
+  }
+  
+  .profile .overlap-4 {
+    position: relative;
+    width: 277px;
+    height: 260px;
+    background-color: #d9d9d9;
+    border-radius: 138.5px / 130px;
+  }
+  
+  .profile .text-wrapper-12 {
+    top: 171px;
+    left: 58px;
+    position: absolute;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .profile .text-wrapper-13 {
+    position: absolute;
+    top: 115px;
+    left: 49px;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .profile .username {
+    position: absolute;
+    width: 402px;
+    height: 99px;
+    top: 410px;
+    left: 364px;
+  }
+  
+  .profile .text-wrapper-14 {
+    width: 300px;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    position: absolute;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .profile .email {
+    position: absolute;
+    width: 402px;
+    height: 100px;
+    top: 640px;
+    left: 364px;
+  }
+  
+  .profile .rectangle-2 {
+    top: 40px;
+    position: absolute;
+    width: 400px;
+    height: 60px;
+    left: 0;
+    background-color: #d9d9d9;
+  }
+  
+  .profile .address {
+    position: absolute;
+    width: 402px;
+    height: 100px;
+    top: 759px;
+    left: 364px;
+  }
+  
+  .profile .text-wrapper-15 {
+    width: 223px;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    position: absolute;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .profile .phone-no {
+    position: absolute;
+    width: 402px;
+    height: 98px;
+    top: 528px;
+    left: 364px;
+  }
+  
+  .profile .rectangle-3 {
+    top: 38px;
+    position: absolute;
+    width: 400px;
+    height: 60px;
+    left: 0;
+    background-color: #d9d9d9;
+  }
+  
+  .profile .update {
+    position: absolute;
+    width: 120px;
+    height: 59px;
+    top: 963px;
+    left: 802px;
+  }
+  
+  .profile .overlap-5 {
+    position: relative;
+    width: 118px;
+    height: 59px;
+    background-color: #d9d9d9;
+  }
+  
+  .profile .text-wrapper-16 {
+    position: absolute;
+    top: 17px;
+    left: 14px;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 26px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  

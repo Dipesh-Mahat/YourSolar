@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Monitoring | YourSolar</title>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="div">
+        <div class="sidebar">
+          <div class="logo">
+            <a href="index.html">
+              <div class="logo-content">
+                <i class="fas fa-solar-panel"></i>
+                <span>YourSolar</span>
+              </div>
+            </a>
+          </div>
+          <div class="menu">
+            <a href="dashboard.html" class="menu-item">
+              <i class="fas fa-tachometer-alt"></i>
+              <span>Dashboard</span>
+            </a>
+            <a href="energy.html" class="menu-item">
+              <i class="fas fa-bolt"></i>
+              <span>Energy</span>
+            </a>
+            <a href="battery.html" class="menu-item">
+              <i class="fas fa-battery-full"></i>
+              <span>Battery</span>
+            </a>
+            <a href="weather.html" class="menu-item active">
+              <i class="fas fa-cloud-sun"></i>
+              <span>Weather</span>
+            </a>
+            <a href="profile.html" class="menu-item">
+              <i class="fas fa-user"></i>
+              <span>Profile</span>
+            </a>
+            <a href="settings.html" class="menu-item">
+              <i class="fas fa-cog"></i>
+              <span>Settings</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="main-content">
+          <div class="header">
+            <div class="page-title">
+              <h1>Weather Monitoring</h1>
+              <p>Track weather conditions affecting your solar production</p>
+            </div>
+            <div class="user-menu">
+              <div class="status">
+                <div class="status-indicator online"></div>
+                <span>Status: Connected</span>
+              </div>
+              <div class="user-profile">
+                <img src="assets/images/profile-image.jpg" alt="User Profile" />
+                <div class="dropdown">
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="weather-dashboard-grid">
+            <div class="card current-conditions">
+              <div class="card-header">
+                <h2>Current Conditions</h2>
+                <div class="location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Kathmandu, Nepal</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="weather-now">
+                  <div class="weather-icon">
+                    <i class="fas fa-sun"></i>
+                  </div>
+                  <div class="temperature-display">
+                    <span class="current-temp">28°C</span>
+                    <span class="feels-like">Feels like: 30°C</span>
+                  </div>
+                  <div class="weather-info">
+                    <h3>Sunny</h3>
+                    <p>Clear sky throughout the day</p>
+                    <span class="last-updated">Last updated: 10:45 AM</span>
+                  </div>
+                </div>
+                <div class="weather-details">
+                  <div class="detail-item">
+                    <i class="fas fa-tint"></i>
+                    <span class="detail-label">Humidity</span>
+                    <span class="detail-value">45%</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-wind"></i>
+                    <span class="detail-label">Wind</span>
+                    <span class="detail-value">8 km/h</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-compress-arrows-alt"></i>
+                    <span class="detail-label">Pressure</span>
+                    <span class="detail-value">1013 hPa</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-eye"></i>
+                    <span class="detail-label">Visibility</span>
+                    <span class="detail-value">10 km</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-sun"></i>
+                    <span class="detail-label">UV Index</span>
+                    <span class="detail-value">6 (High)</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-cloud"></i>
+                    <span class="detail-label">Cloud Cover</span>
+                    <span class="detail-value">5%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card hourly-forecast">
+              <div class="card-header">
+                <h2>Hourly Forecast</h2>
+                <div class="date-display">
+                  <i class="fas fa-calendar-day"></i>
+                  <span>Today, June 5, 2023</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="hourly-scroll">
+                  <div class="hourly-item">
+                    <span class="hour">Now</span>
+                    <i class="fas fa-sun"></i>
+                    <span class="hour-temp">28°C</span>
+                    <span class="precip">0%</span>
+                  </div>
+                  <div class="hourly-item">
+                    <span class="hour">11 AM</span>
+                    <i class="fas fa-sun"></i>
+                    <span class="hour-temp">29°C</span>
+                    <span class="precip">0%</span>
+                  </div>
+                  <div class="hourly-item">
+                    <span class="hour">12 PM</span>
+                    <i class="fas fa-sun"></i>
+                    <span class="hour-temp">30°C</span>
+                    <span class="precip">0%</span>
+                  </div>
+                  <div class="hourly-item">
+                    <span class="hour">1 PM</span>
+                    <i class="fas fa-sun"></i>
+                    <span class="hour-temp">31°C</span>
+                    <span class="precip">0%</span>
+                  </div>
+                  <div class="hourly-item">
+                    <span class="hour">2 PM</span>
+                    <i class="fas fa-cloud-sun"></i>
+                    <span class="hour-temp">31°C</span>
+                    <span class="precip">5%</span>
+                  </div>
+                  <div class="hourly-item">
+                    <span class="hour">3 PM</span>
+                    <i class="fas fa-cloud-sun"></i>
+                    <span class="hour-temp">30°C</span>
+                    <span class="precip">10%</span>
+                  </div>
+                  <div class="hourly-item">
+                    <span class="hour">4 PM</span>
+                    <i class="fas fa-cloud-sun"></i>
+                    <span class="hour-temp">29°C</span>
+                    <span class="precip">15%</span>
+                  </div>
+                  <div class="hourly-item">
+                    <span class="hour">5 PM</span>
+                    <i class="fas fa-cloud"></i>
+                    <span class="hour-temp">28°C</span>
+                    <span class="precip">20%</span>
+                  </div>
+                </div>
+                <div class="hourly-chart-container">
+                  <canvas id="hourlyForecastChart"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="card daily-forecast">
+              <div class="card-header">
+                <h2>7-Day Forecast</h2>
+                <div class="period-selector">
+                  <span class="active">Week</span>
+                  <span>Month</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="daily-items">
+                  <div class="daily-item">
+                    <div class="day-info">
+                      <span class="day-name">Today</span>
+                      <span class="day-date">Jun 5</span>
+                    </div>
+                    <div class="day-icon">
+                      <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="day-temp">
+                      <span class="high">32°C</span>
+                      <span class="low">24°C</span>
+                    </div>
+                    <div class="day-condition">Sunny</div>
+                    <div class="day-precip">
+                      <i class="fas fa-tint"></i>
+                      <span>0%</span>
+                    </div>
+                  </div>
+                  <div class="daily-item">
+                    <div class="day-info">
+                      <span class="day-name">Tue</span>
+                      <span class="day-date">Jun 6</span>
+                    </div>
+                    <div class="day-icon">
+                      <i class="fas fa-cloud-sun"></i>
+                    </div>
+                    <div class="day-temp">
+                      <span class="high">30°C</span>
+                      <span class="low">23°C</span>
+                    </div>
+                    <div class="day-condition">Partly Cloudy</div>
+                    <div class="day-precip">
+                      <i class="fas fa-tint"></i>
+                      <span>10%</span>
+                    </div>
+                  </div>
+                  <div class="daily-item">
+                    <div class="day-info">
+                      <span class="day-name">Wed</span>
+                      <span class="day-date">Jun 7</span>
+                    </div>
+                    <div class="day-icon">
+                      <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="day-temp">
+                      <span class="high">29°C</span>
+                      <span class="low">22°C</span>
+                    </div>
+                    <div class="day-condition">Cloudy</div>
+                    <div class="day-precip">
+                      <i class="fas fa-tint"></i>
+                      <span>20%</span>
+                    </div>
+                  </div>
+                  <div class="daily-item">
+                    <div class="day-info">
+                      <span class="day-name">Thu</span>
+                      <span class="day-date">Jun 8</span>
+                    </div>
+                    <div class="day-icon">
+                      <i class="fas fa-cloud-sun-rain"></i>
+                    </div>
+                    <div class="day-temp">
+                      <span class="high">27°C</span>
+                      <span class="low">21°C</span>
+                    </div>
+                    <div class="day-condition">Light Rain</div>
+                    <div class="day-precip">
+                      <i class="fas fa-tint"></i>
+                      <span>40%</span>
+                    </div>
+                  </div>
+                  <div class="daily-item">
+                    <div class="day-info">
+                      <span class="day-name">Fri</span>
+                      <span class="day-date">Jun 9</span>
+                    </div>
+                    <div class="day-icon">
+                      <i class="fas fa-cloud-rain"></i>
+                    </div>
+                    <div class="day-temp">
+                      <span class="high">25°C</span>
+                      <span class="low">20°C</span>
+                    </div>
+                    <div class="day-condition">Rain</div>
+                    <div class="day-precip">
+                      <i class="fas fa-tint"></i>
+                      <span>60%</span>
+                    </div>
+                  </div>
+                  <div class="daily-item">
+                    <div class="day-info">
+                      <span class="day-name">Sat</span>
+                      <span class="day-date">Jun 10</span>
+                    </div>
+                    <div class="day-icon">
+                      <i class="fas fa-cloud-sun"></i>
+                    </div>
+                    <div class="day-temp">
+                      <span class="high">28°C</span>
+                      <span class="low">21°C</span>
+                    </div>
+                    <div class="day-condition">Partly Cloudy</div>
+                    <div class="day-precip">
+                      <i class="fas fa-tint"></i>
+                      <span>20%</span>
+                    </div>
+                  </div>
+                  <div class="daily-item">
+                    <div class="day-info">
+                      <span class="day-name">Sun</span>
+                      <span class="day-date">Jun 11</span>
+                    </div>
+                    <div class="day-icon">
+                      <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="day-temp">
+                      <span class="high">29°C</span>
+                      <span class="low">22°C</span>
+                    </div>
+                    <div class="day-condition">Sunny</div>
+                    <div class="day-precip">
+                      <i class="fas fa-tint"></i>
+                      <span>0%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card solar-impact">
+              <div class="card-header">
+                <h2>Solar Production Impact</h2>
+                <div class="period-selector">
+                  <span>Day</span>
+                  <span class="active">Week</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="impact-chart-container">
+                  <canvas id="solarImpactChart"></canvas>
+                </div>
+                <div class="impact-insights">
+                  <div class="insight-item">
+                    <i class="fas fa-sun"></i>
+                    <div class="insight-content">
+                      <h4>Optimal Weather</h4>
+                      <p>Sunny conditions today are <strong>excellent</strong> for solar production. Expect 100% efficiency.</p>
+                    </div>
+                  </div>
+                  <div class="insight-item">
+                    <i class="fas fa-cloud-rain"></i>
+                    <div class="insight-content">
+                      <h4>Upcoming Weather Alert</h4>
+                      <p>Rain expected on Friday may <strong>reduce production by 40-60%</strong>. Consider adjusting your energy usage.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card alerts-notifications">
+              <div class="card-header">
+                <h2>Weather Alerts</h2>
+                <div class="alerts-badge">2 Active</div>
+              </div>
+              <div class="card-content">
+                <div class="alert-item high">
+                  <div class="alert-icon">
+                    <i class="fas fa-thermometer-full"></i>
+                  </div>
+                  <div class="alert-content">
+                    <h4>Heat Advisory</h4>
+                    <p>High temperatures may affect solar panel efficiency. Ensure proper ventilation.</p>
+                    <span class="alert-time">Active until 6:00 PM</span>
+                  </div>
+                </div>
+                <div class="alert-item medium">
+                  <div class="alert-icon">
+                    <i class="fas fa-smog"></i>
+                  </div>
+                  <div class="alert-content">
+                    <h4>Air Quality Alert</h4>
+                    <p>Moderate pollution levels may reduce sunlight penetration by 5-10%.</p>
+                    <span class="alert-time">Active until tomorrow</span>
+                  </div>
+                </div>
+                <div class="alert-item low">
+                  <div class="alert-icon">
+                    <i class="fas fa-cloud-rain"></i>
+                  </div>
+                  <div class="alert-content">
+                    <h4>Rain Expected</h4>
+                    <p>Prepare for reduced solar production on Thursday-Friday.</p>
+                    <span class="alert-time">Starting in 2 days</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card historical-data">
+              <div class="card-header">
+                <h2>Historical Weather Data</h2>
+                <div class="period-selector">
+                  <span>Week</span>
+                  <span class="active">Month</span>
+                  <span>Year</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="historical-chart-container">
+                  <canvas id="historicalWeatherChart"></canvas>
+                </div>
+                <div class="historical-stats">
+                  <div class="stat-item">
+                    <span class="stat-label">Sunny Days</span>
+                    <span class="stat-value">22</span>
+                    <span class="stat-context">in the last month</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-label">Rain Days</span>
+                    <span class="stat-value">5</span>
+                    <span class="stat-context">in the last month</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-label">Average Temperature</span>
+                    <span class="stat-value">26°C</span>
+                    <span class="stat-context">+2°C vs. last year</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Hourly Forecast Chart
+        const hourlyCtx = document.getElementById('hourlyForecastChart').getContext('2d');
+        const hourlyChart = new Chart(hourlyCtx, {
+          type: 'line',
+          data: {
+            labels: ['Now', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM'],
+            datasets: [
+              {
+                label: 'Temperature (°C)',
+                data: [28, 29, 30, 31, 31, 30, 29, 28, 27, 26, 25],
+                borderColor: '#FF9800',
+                backgroundColor: 'rgba(255, 152, 0, 0.1)',
+                tension: 0.4,
+                yAxisID: 'y',
+                fill: true
+              },
+              {
+                label: 'Precipitation (%)',
+                data: [0, 0, 0, 0, 5, 10, 15, 20, 25, 15, 5],
+                borderColor: '#2196F3',
+                backgroundColor: 'rgba(33, 150, 243, 0.1)',
+                tension: 0.4,
+                yAxisID: 'y1',
+                fill: true
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: 'top',
+              }
+            },
+            scales: {
+              y: {
+                type: 'linear',
+                display: true,
+                position: 'left',
+                title: {
+                  display: true,
+                  text: 'Temperature (°C)'
+                },
+                min: 20,
+                max: 35
+              },
+              y1: {
+                type: 'linear',
+                display: true,
+                position: 'right',
+                title: {
+                  display: true,
+                  text: 'Precipitation (%)'
+                },
+                min: 0,
+                max: 100,
+                grid: {
+                  drawOnChartArea: false
+                }
+              }
+            }
+          }
+        });
+
+        // Solar Impact Chart
+        const impactCtx = document.getElementById('solarImpactChart').getContext('2d');
+        const impactChart = new Chart(impactCtx, {
+          type: 'bar',
+          data: {
+            labels: ['Today', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            datasets: [
+              {
+                label: 'Expected Solar Efficiency (%)',
+                data: [100, 90, 75, 60, 40, 85, 95],
+                backgroundColor: '#FFC107',
+                barPercentage: 0.6
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: 'top',
+              }
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 100,
+                title: {
+                  display: true,
+                  text: 'Efficiency (%)'
+                }
+              }
+            }
+          }
+        });
+
+        // Historical Weather Chart
+        const historicalCtx = document.getElementById('historicalWeatherChart').getContext('2d');
+        const historicalChart = new Chart(historicalCtx, {
+          type: 'line',
+          data: {
+            labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+            datasets: [
+              {
+                label: 'Average Temperature (°C)',
+                data: [25, 26, 27, 28],
+                borderColor: '#FF9800',
+                backgroundColor: 'rgba(255, 152, 0, 0.1)',
+                tension: 0.4,
+                fill: true
+              },
+              {
+                label: 'Sunny Days',
+                data: [5, 6, 5, 6],
+                borderColor: '#FFC107',
+                backgroundColor: 'rgba(255, 193, 7, 0.1)',
+                tension: 0.4,
+                fill: true
+              },
+              {
+                label: 'Rainy Days',
+                data: [1, 0, 2, 2],
+                borderColor: '#2196F3',
+                backgroundColor: 'rgba(33, 150, 243, 0.1)',
+                tension: 0.4,
+                fill: true
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: 'top',
+              }
+            },
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
