@@ -145,174 +145,322 @@
           </div>
         </header>
         
-        <div class="overlap">
-          <div class="solutions" id="solutions"></div>
-          <div class="household"></div>
-          <div class="community"></div>
-          <div class="commercial"></div>
-          <div class="rectangle"></div>
-          <img class="img" src="img/rectangle-63.svg" />
-          
-          <div class="text-wrapper-3">Solar for Businesses</div>
-          <div class="text-wrapper-4">Solar for Homes</div>
-          <div class="text-wrapper-5">Solar for Communities</div>
-          <p class="text-wrapper-6">
-            Reduce operational costs and power your business with clean, renewable solar energy. Get a customized solar
-            solution for your company today!
-          </p>
-          <p class="text-wrapper-7">
-            Switch to solar power at home and save on electricity bills. Get a reliable and eco-friendly energy solution
-            for your household!
-          </p>
-          <p class="text-wrapper-8">
-            Empower your neighbourhood with shared solar energy. Make solar affordable and accessible for your
-            community!
-          </p>
-          <div class="explore">
-            <div class="overlap-4"><div class="text-wrapper-9">Explore Commercial Plan</div></div>
+  
+
+    <div class="nepal-container">
+        <!-- Map of Nepal -->
+        <div class="nepal-map-section">
+          <div class="nepal-map-container">
+      
+            <div class="nepal-map-display">
+              <img src="img/DALL·E 2025-03-24 08.54.31 - A wide digital illustration of Nepal's map designed for a solar panel website. The map retains the shape of Nepal and incorporates elements of solar p.webp" alt="Solar Energy Map of Nepal" class="nepal-map-image" style="max-width: 1400px; height: 400px; object-fit: contain; margin: 0 auto; display: block;">
           </div>
-          <div class="overlap-wrapper">
-            <div class="overlap-4"><div class="text-wrapper-10">Explore Home Plan</div></div>
           </div>
-          <div class="overlap-group-wrapper">
-            <div class="overlap-4"><div class="text-wrapper-9">Explore Community Plan</div></div>
           </div>
           
-          <div class="calculator-wrapper" id="calculator">
-            <p class="calc-title">Calculate your monthly electric bill savings</p>
-            <div class="calculator-box">
-              <div class="calc-input">
-                <div class="input-label">Enter your previous monthly electricity bill (NPR)</div>
-                <input type="text" id="monthlyBill" class="calc-field">
-              </div>
-              <div class="calc-input">
-                <div class="input-label">Rate per unit in your area (NPR)</div>
-                <input type="text" id="ratePerUnit" class="calc-field">
-              </div>
-              <div class="calc-output">
-                <div class="output-label">Output</div>
-                <div class="output-value" id="calculationResult"></div>
-              </div>
-              <button id="calculateBtn" class="calculate-button">Calculate</button>
+        <!-- Solar Options -->
+        <div class="solar-category-container">
+            <div class="solar-category-box">
+                <h3 class="solar-category-heading">Solar for Businesses</h3>
+                <p class="solar-category-text">Reduce operational costs with commercial solar installation. Save energy costs and reduce your carbon footprint.</p>
+                <a href="#" class="solar-action-btn">Explore Commercial Plan</a>
+            </div>
+            
+            <div class="solar-category-box">
+                <h3 class="solar-category-heading">Solar for Communities</h3>
+                <p class="solar-category-text">Empower your neighborhood with community solar programs. Make solar affordable and accessible to everyone in your community.</p>
+                <a href="#" class="solar-action-btn">Explore Community Plan</a>
+          </div>
+          
+            <div class="solar-category-box">
+                <h3 class="solar-category-heading">Solar for Homes</h3>
+                <p class="solar-category-text">Switch to solar power at your home and start saving immediately. Get a reliable and quality solar solution to power your household!</p>
+                <a href="#" class="solar-action-btn">Explore Home Plan</a>
             </div>
           </div>
-          
-          <div class="text-wrapper-13">Trusted partners</div>
-          <div class="partner-slider-container">
-            <div class="partner-logos-slider">
-              <a href="https://www.tesla.com/energy" target="_blank" class="partner-logo-link" data-name="Tesla">
-                <img src="img/tesla-logo.png" alt="Tesla" class="partner-logo">
-                <div class="logo-fallback">T</div>
-              </a>
-              <a href="https://us.sunpower.com/" target="_blank" class="partner-logo-link" data-name="SunPower">
-                <img src="img/sunpower-logo.png" alt="SunPower" class="partner-logo">
-                <div class="logo-fallback">SP</div>
-              </a>
-              <a href="https://www.firstsolar.com/" target="_blank" class="partner-logo-link" data-name="First Solar">
-                <img src="img/firstsolar-logo.png" alt="First Solar" class="partner-logo">
-                <div class="logo-fallback">FS</div>
-              </a>
-              <a href="https://www.jinko.com/" target="_blank" class="partner-logo-link" data-name="JinkoSolar">
-                <img src="img/jinko-logo.png" alt="JinkoSolar" class="partner-logo">
-                <div class="logo-fallback">JS</div>
-              </a>
-              <a href="https://www.canadiansolar.com/" target="_blank" class="partner-logo-link" data-name="Canadian Solar">
-                <img src="img/canadiansolar-logo.png" alt="Canadian Solar" class="partner-logo">
-                <div class="logo-fallback">CS</div>
-              </a>
-              <a href="https://www.loomsolar.com/" target="_blank" class="partner-logo-link" data-name="Loom Solar">
-                <img src="img/loomsolar-logo.png" alt="Loom Solar" class="partner-logo">
-                <div class="logo-fallback">LS</div>
-              </a>
-              <a href="https://www.tatapowersolar.com/" target="_blank" class="partner-logo-link" data-name="Tata Power Solar">
-                <img src="img/tatapower-logo.png" alt="Tata Power Solar" class="partner-logo">
-                <div class="logo-fallback">TPS</div>
-              </a>
-              <a href="https://www.vikramsolar.com/" target="_blank" class="partner-logo-link" data-name="Vikram Solar">
-                <img src="img/vikramsolar-logo.png" alt="Vikram Solar" class="partner-logo">
-                <div class="logo-fallback">VS</div>
-              </a>
-              <!-- Duplicate logos for continuous loop effect -->
-              <a href="https://www.tesla.com/energy" target="_blank" class="partner-logo-link" data-name="Tesla">
-                <img src="img/tesla-logo.png" alt="Tesla" class="partner-logo">
-                <div class="logo-fallback">T</div>
-              </a>
-              <a href="https://us.sunpower.com/" target="_blank" class="partner-logo-link" data-name="SunPower">
-                <img src="img/sunpower-logo.png" alt="SunPower" class="partner-logo">
-                <div class="logo-fallback">SP</div>
-              </a>
-              <a href="https://www.firstsolar.com/" target="_blank" class="partner-logo-link" data-name="First Solar">
-                <img src="img/firstsolar-logo.png" alt="First Solar" class="partner-logo">
-                <div class="logo-fallback">FS</div>
-              </a>
-            </div>
-          </div>
+        
+        <!-- Calculator -->
+        <div class="bill-calculator">
+            <h3 class="calculator-heading">Calculate your monthly electric bill</h3>
+            <input type="number" id="monthly-bill" class="calculator-input" placeholder="Enter monthly electricity bill">
+            <input type="number" id="unit-rate" class="calculator-input" placeholder="Rate per unit in your area">
+            <div id="calc-output" class="calculator-result">Output</div>
+            <button id="calculate-btn" class="calculator-submit" onclick="calculateElectricBill()">Calculate</button>
         </div>
         
-        <div class="about-us" id="about-us">
-          <div class="overlap-group-2">
-            <div class="rectangle-11"></div>
-            <div class="rectangle-12"></div>
-            <div class="text-wrapper-14">About us</div>
-            <p class="we-are-dedicated-to">
-              We are dedicated to promoting sustainable energy solutions by making solar power accessible, efficient,<br />and
-              cost-effective for everyone. Our platform helps users monitor their solar energy usage, track savings,
-              <br />and optimize performance with real-time data and AI-powered insights. Whether for homes, businesses,
-              <br />or communities, we aim to empower Nepal with clean, renewable energy for a greener future.
-            </p>
-          </div>
-        </div>
-        
-        <footer class="footer">
-          <div class="overlap-5">
-            <div class="footer-content">
-              <div class="footer-brand">
-                <div class="footer-logo"><i class="fas fa-solar-panel"></i> Your Solar</div>
-                <div class="footer-details">
-                  <h4>Contact Information</h4>
-                  <p><i class="fas fa-map-marker-alt"></i> Address: Kathmandu, Nepal</p>
-                  <p><i class="fas fa-envelope"></i> Email: info@yoursolar.com</p>
-                  <p><i class="fas fa-phone-alt"></i> Phone: +977-123456789</p>
-                  <div class="social-icons">
-                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <!-- Partners --> 
+          <body class="sp_trusted_body">
+          <div class="sp_trusted_wrapper">
+              <div class="sp_trusted_header"></div>
+              <div class="sp_trusted_partners_section">
+                  <h2 class="sp_trusted_partners_title">Trusted Partners</h2>
+                  <div class="sp_trusted_partners_container">
+                      <div class="sp_trusted_partners_scroll" id="sp_trusted_partners_scroll">
+                          <!-- Logos will be added here by JavaScript -->
+                      </div>
                   </div>
-                </div>
+              </div>
+              <div class="sp_trusted_footer"></div>
+          </div>
+      
+        </div>
+        
+        <!-- About -->
+        <div class="about-section">
+            <h3 class="about-heading">About us</h3>
+            <p class="about-text">We are dedicated to promoting sustainable energy solutions by making high-quality solar power systems accessible and affordable for everyone. Our platform helps users monitor their solar energy usage, track savings, and get personalized insights. Whether for homes, businesses, or communities, we're empowering Nepal with clean, renewable energy for a brighter future. Our team of experts is committed to providing the best solar solutions tailored to Nepal's unique geography and energy needs.</p>
+            <p class="about-text"></p>
+                  </div>
+        
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-block">
+                <h3 class="footer-block-title">Your Solar</h3>
+                <p class="footer-text">Contact Information:</p>
+                <p class="footer-text">Address: Kathmandu, Nepal</p>
+                <p class="footer-text">Email: support@yoursolar.com</p>
+                <p class="footer-text">Phone: +977-1234-56789</p>
+                <p class="footer-text">Social Media Links:</p>
+                <p class="footer-text">Facebook | Twitter | LinkedIn</p>
               </div>
               
-              <div class="footer-links">
-                <h3>Explore</h3>
-                <ul>
-                  <li><a href="commercial.html"><i class="fas fa-angle-right"></i> Commercial Solar</a></li>
-                  <li><a href="house.html"><i class="fas fa-angle-right"></i> Residential Solar</a></li>
-                  <li><a href="community.html"><i class="fas fa-angle-right"></i> Community Solar</a></li>
-                  <li><a href="#"><i class="fas fa-angle-right"></i> Solar Financing</a></li>
-                  <li><a href="#"><i class="fas fa-angle-right"></i> Solar Technology</a></li>
-                </ul>
+            <div class="footer-block">
+                <h3 class="footer-block-title">Explore</h3>
+                <a href="#" class="footer-link">Commercial Solar</a>
+                <a href="#" class="footer-link">Community Solar</a>
+                <a href="#" class="footer-link">Residential Solar</a>
+                <a href="#" class="footer-link">Solar Financing</a>
+                <a href="#" class="footer-link">Project Gallery</a>
               </div>
               
-              <div class="footer-newsletter">
-                <h3>Stay Connected</h3>
-                <p>Subscribe to our newsletter to get the latest updates on our solar solutions and exclusive offers</p>
+            <div class="footer-block">
+                <h3 class="footer-block-title">Stay Connected</h3>
+                <p class="footer-text">Sign up to receive all the latest updates and activities</p>
                 <div class="newsletter-form">
-                  <input type="email" placeholder="Enter Email" class="email-input">
-                  <button class="submit-btn">Submit</button>
-                </div>
-                <p class="privacy-note">We respect your privacy and will never share your information.</p>
+                    <input type="email" class="newsletter-input" placeholder="Enter Email">
+                    <button class="newsletter-btn">Submit</button>
               </div>
             </div>
             
-            <div class="copyright">
-              <p>&copy; 2023 Your Solar. All Rights Reserved.</p>
-            </div>
+            <div class="copyright-text">
+                © 2025 Your Solar | All Rights Reserved
           </div>
         </footer>
-      </div>
     </div>
 
     <script>
+       // Array of solar company logos
+       const sp_trusted_partners = [
+            {
+                name: "Tesla", 
+                logo: `<svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 0 342 35" width="200">
+                        <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"/>
+                      </svg>`, 
+                url: "#tesla",
+                isHTML: true
+            },
+            {
+                name: "Tesla", 
+                logo: `<svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 0 342 35" width="200">
+                        <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"/>
+                      </svg>`, 
+                url: "#tesla",
+                isHTML: true
+            },{
+                name: "Tesla", 
+                logo: `<svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 0 342 35" width="200">
+                        <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"/>
+                      </svg>`, 
+                url: "#tesla",
+                isHTML: true
+            },{
+                name: "Tesla", 
+                logo: `<svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 0 342 35" width="200">
+                        <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"/>
+                      </svg>`, 
+                url: "#tesla",
+                isHTML: true
+            },{
+                name: "Tesla", 
+                logo: `<svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 0 342 35" width="200">
+                        <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"/>
+                      </svg>`, 
+                url: "#tesla",
+                isHTML: true
+            },{
+                name: "Tesla", 
+                logo: `<svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 0 342 35" width="200">
+                        <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"/>
+                      </svg>`, 
+                url: "#tesla",
+                isHTML: true
+            },{
+                name: "Tesla", 
+                logo: `<svg xmlns="" height="80" viewBox="0 0 342 35" width="200">
+                        <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"/>
+                      </svg>`, 
+                url: "#tesla",
+                isHTML: true
+            },{
+                name: "Tesla", 
+                logo: `<svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 0 342 35" width="200">
+                        <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"/>
+                      </svg>`, 
+                url: "#tesla",
+                isHTML: true
+            }
+        ];
+
+        // Function to populate the scrolling section
+        function sp_trusted_populatePartners() {
+            const scrollContainer = document.getElementById('sp_trusted_partners_scroll');
+            
+            // Add each partner twice to ensure smooth continuous scrolling
+            for (let i = 0; i < 2; i++) {
+                sp_trusted_partners.forEach(partner => {
+                    const logoLink = document.createElement('a');
+                    logoLink.href = partner.url;
+                    
+                    if (partner.isHTML) {
+                        // For partners with SVG/HTML logos (like Tesla)
+                        const logoContainer = document.createElement('div');
+                        logoContainer.className = "sp_trusted_partner_logo";
+                        logoContainer.setAttribute("title", partner.name);
+                        logoContainer.innerHTML = partner.logo;
+                        logoLink.appendChild(logoContainer);
+                    } else {
+                        // For partners with image URLs
+                        const logo = document.createElement('img');
+                        logo.src = partner.logo;
+                        logo.alt = partner.name + " logo";
+                        logo.className = "sp_trusted_partner_logo";
+                        logo.setAttribute("title", partner.name);
+                        logoLink.appendChild(logo);
+                    }
+                    
+                    scrollContainer.appendChild(logoLink);
+                });
+            }
+        }
+
+        // Initialize on page load
+        window.addEventListener('load', sp_trusted_populatePartners);
+
+        // Pause animation on hover
+        const sp_trusted_scrollElement = document.querySelector('.sp_trusted_partners_scroll');
+        document.querySelector('.sp_trusted_partners_container').addEventListener('mouseenter', () => {
+            sp_trusted_scrollElement.style.animationPlayState = 'paused';
+        });
+        
+        document.querySelector('.sp_trusted_partners_container').addEventListener('mouseleave', () => {
+            sp_trusted_scrollElement.style.animationPlayState = 'running';
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Map image loading functionality
+            const mapLinkInput = document.getElementById('mapLinkInput');
+            const loadMapBtn = document.getElementById('loadMapBtn');
+            const nepalMap = document.getElementById('nepalMap');
+            
+            if (loadMapBtn) {
+                loadMapBtn.addEventListener('click', function() {
+                    const imageUrl = mapLinkInput.value.trim();
+                    if (imageUrl) {
+                        // Set the image as background
+                        nepalMap.style.backgroundImage = `url(${imageUrl})`;
+                        // Remove placeholder gradient
+                        nepalMap.style.backgroundColor = 'transparent';
+                        
+                        // Show success message
+                        alert('Map image loaded successfully!');
+                    } else {
+                        alert('Please enter a valid image URL');
+                    }
+                });
+            }
+            
+            // Check partner logos
+            const partnerLogos = document.querySelectorAll('.partner-logo img');
+            partnerLogos.forEach(logo => {
+                if (!logo.complete || logo.naturalWidth === 0) {
+                    console.log(`Logo failed to load: ${logo.src}`);
+                    logo.src = `https://via.placeholder.com/150x50/ffffff/333333?text=${logo.alt}`;
+                } else {
+                    console.log(`Logo loaded successfully: ${logo.src}`);
+                }
+            });
+            
+            // Calculator functionality
+            const calculateBtn = document.getElementById('calculate-btn');
+            const monthlyBillInput = document.getElementById('monthly-bill');
+            const unitRateInput = document.getElementById('unit-rate');
+            const outputDiv = document.getElementById('calc-output');
+            
+            // Add focus effects
+            const inputs = document.querySelectorAll('.calculator-input');
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.style.borderColor = '#3498db';
+                    this.style.boxShadow = '0 0 0 2px rgba(52, 152, 219, 0.2)';
+                });
+                
+                input.addEventListener('blur', function() {
+                    this.style.borderColor = '#bdc3c7';
+                    this.style.boxShadow = 'none';
+                });
+            });
+            
+            // Button hover animation
+            const buttons = document.querySelectorAll('.solar-action-btn, .calculator-submit, .nepal-map-btn');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                    this.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                    this.style.boxShadow = '';
+                });
+            });
+            
+            // Calculator functionality
+            calculateBtn.addEventListener('click', function() {
+                const monthlyBill = parseFloat(monthlyBillInput.value);
+                const unitRate = parseFloat(unitRateInput.value);
+                
+                if (isNaN(monthlyBill) || isNaN(unitRate)) {
+                    outputDiv.textContent = 'Please enter valid numbers';
+                    outputDiv.style.color = '#e74c3c';
+                    return;
+                }
+                
+                if (unitRate === 0) {
+                    outputDiv.textContent = 'Rate per unit cannot be zero';
+                    outputDiv.style.color = '#e74c3c';
+                    return;
+                }
+                
+                // Enhanced calculation
+                const unitsConsumed = monthlyBill / unitRate;
+                const solarSavings = monthlyBill * 0.6; // Assuming 60% savings with solar
+                const annualSavings = solarSavings * 12;
+                
+                outputDiv.innerHTML = `
+                    <strong>Monthly Units:</strong> ${unitsConsumed.toFixed(2)}<br>
+                    <strong>Monthly Savings:</strong> NPR ${solarSavings.toFixed(2)}<br>
+                    <strong>Annual Savings:</strong> NPR ${annualSavings.toFixed(2)}
+                `;
+                outputDiv.style.color = '#2c3e50';
+                
+                // Add animation
+                outputDiv.style.backgroundColor = '#e8f4fc';
+                setTimeout(() => {
+                    outputDiv.style.backgroundColor = '#f8f9fa';
+                }, 500);
+            });
+        });
+    
       // Login and Signup Overlay Functions
       function toggleLoginOverlay() {
         const loginOverlay = document.getElementById('loginOverlay');
@@ -343,80 +491,42 @@
         notification.classList.add('hidden');
       }
 
-      // Calculator Functionality
-      document.addEventListener('DOMContentLoaded', function() {
-        const calculateBtn = document.getElementById('calculateBtn');
-        const monthlyBillInput = document.getElementById('monthlyBill');
-        const ratePerUnitInput = document.getElementById('ratePerUnit');
-        const calculationResult = document.getElementById('calculationResult');
-
-        if (calculateBtn) {
-          calculateBtn.addEventListener('click', function() {
-            const monthlyBill = parseFloat(monthlyBillInput.value) || 0;
-            const ratePerUnit = parseFloat(ratePerUnitInput.value) || 0;
-            
-            if (monthlyBill <= 0 || ratePerUnit <= 0) {
-              calculationResult.textContent = 'Please enter valid values';
+      // New function to calculate electric bill
+      function calculateElectricBill() {
+        const monthlyBill = parseFloat(document.getElementById('monthly-bill').value);
+        const unitRate = parseFloat(document.getElementById('unit-rate').value);
+        const outputDiv = document.getElementById('calc-output');
+        
+        if (isNaN(monthlyBill) || isNaN(unitRate)) {
+          outputDiv.textContent = 'Please enter valid numbers';
+          outputDiv.style.color = '#e74c3c';
               return;
             }
             
-            // Calculate units consumed
-            const unitsConsumed = monthlyBill / ratePerUnit;
-            
-            // Calculate estimated savings with solar (assume 70% savings)
-            const estimatedSavings = monthlyBill * 0.7;
-            
-            // Format with NPR
-            calculationResult.textContent = `You can save Rs. ${estimatedSavings.toLocaleString('en-IN')} by just using our solar panel`;
-          });
+        if (unitRate === 0) {
+          outputDiv.textContent = 'Rate per unit cannot be zero';
+          outputDiv.style.color = '#e74c3c';
+          return;
         }
-
-        // Show notification after 3 seconds
+        
+        // Enhanced calculation
+        const unitsConsumed = monthlyBill / unitRate;
+        const solarSavings = monthlyBill * 0.6; // Assuming 60% savings with solar
+        const annualSavings = solarSavings * 12;
+        
+        outputDiv.innerHTML = `
+          <strong>Monthly Units:</strong> ${unitsConsumed.toFixed(2)}<br>
+          <strong>Monthly Savings:</strong> NPR ${solarSavings.toFixed(2)}<br>
+          <strong>Annual Savings:</strong> NPR ${annualSavings.toFixed(2)}
+        `;
+        outputDiv.style.color = '#2c3e50';
+        
+        // Add animation
+        outputDiv.style.backgroundColor = '#e8f4fc';
         setTimeout(() => {
-          const notification = document.getElementById('notificationPopup');
-          if (notification) {
-            notification.classList.add('show');
-          }
-        }, 3000);
-        
-        // Partner Logo Fallbacks
-        const partnerLogoLinks = document.querySelectorAll('.partner-logo-link');
-        const colors = ['#4285F4', '#EA4335', '#FBBC05', '#34A853', '#FF6D01', '#2AA7FF', '#FF3478', '#7CBB00'];
-        
-        partnerLogoLinks.forEach((link, index) => {
-          const img = link.querySelector('.partner-logo');
-          const fallback = link.querySelector('.logo-fallback');
-          const colorIndex = index % colors.length;
-          
-          if (fallback) {
-            fallback.style.backgroundColor = colors[colorIndex];
-            // Force display of fallbacks by default
-            img.style.display = 'none';
-            fallback.style.display = 'flex';
-          }
-          
-          // Handle image load errors
-          img.addEventListener('error', function() {
-            img.style.display = 'none';
-            if (fallback) {
-              fallback.style.display = 'flex';
-            }
-          });
-        });
-        
-        // Partner logos auto-scroll
-        const partnerLogosSlider = document.querySelector('.partner-logos-slider');
-        if (partnerLogosSlider) {
-          // Pause animation when hovering
-          partnerLogosSlider.addEventListener('mouseenter', () => {
-            partnerLogosSlider.style.animationPlayState = 'paused';
-          });
-          
-          partnerLogosSlider.addEventListener('mouseleave', () => {
-            partnerLogosSlider.style.animationPlayState = 'running';
-          });
-        }
-      });
+          outputDiv.style.backgroundColor = '#f8f9fa';
+        }, 500);
+      }
     </script>
   </body>
 </html>

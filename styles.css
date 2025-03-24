@@ -953,15 +953,6 @@ body.overlay-open {
   padding: 20px 0;
 }
 
-@keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
 .partner-logo-link {
   display: block;
   text-decoration: none;
@@ -1388,4 +1379,557 @@ body.overlay-open {
     transform: translateX(calc(-180px * 8)); /* Half the width */
   }
 }
+
+/* Partners Section Styling - Improved Visibility */
+.partners-section {
+  background-color: #b7b7b7;
+  padding: 15px 0;
+  margin: 30px 0;
+  text-align: center;
+  width: 100%;
+  border-top: 15px solid #333;
+  border-bottom: 15px solid #333;
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+.partners-heading {
+  text-align: center;
+  color: #000;
+  font-size: 24px;
+  margin: 15px 0;
+  font-weight: 600;
+  display: block;
+}
+
+.partners-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 40px 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.partner-logo {
+  flex: 0 0 auto;
+  height: 100px;
+  width: 150px;
+  margin: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 15px;
+}
+
+.partner-logo img {
+  max-width: 100%;
+  max-height: 60px;
+  object-fit: contain;
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Enhanced Nepal Map Display */
+.nepal-map-section {
+  padding: 40px 0;
+  background-color: #2c3e50;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.nepal-map-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.nepal-map-display {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  background-color: transparent;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nepal-map-image {
+  max-width: 1400px;
+  height: 400px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.5s ease;
+  margin: 0 auto;
+}
+
+.nepal-map-display:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.nepal-map-display:hover .nepal-map-image {
+  transform: scale(1.02);
+}
+
+.nepal-map-title {
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #222;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.nepal-map-link-input {
+  margin-top: 15px;
+  padding: 10px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.nepal-map-btn {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Solar Options Section */
+.solar-category-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2c3e50;
+  color: white;
+  padding: 30px 20px;
+}
+
+.solar-category-box {
+  flex: 1;
+  padding: 25px 20px;
+  margin: 0 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.solar-category-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.solar-category-heading {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #3498db;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.solar-category-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #3498db;
+}
+
+.solar-category-text {
+  font-size: 15px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #ecf0f1;
+}
+
+.solar-action-btn {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.solar-action-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Calculator Section */
+.bill-calculator {
+  background-color: #ecf0f1;
+  padding: 30px;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 450px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.calculator-heading {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.calculator-input {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.calculator-input:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.calculator-result {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.calculator-submit {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.calculator-submit:hover {
+  background-color: #1e2b38;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Partners Section */
+.partners-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 25px 20px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.partners-heading {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-right: 20px;
+}
+
+.partners-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.partner-item {
+  width: 80px;
+  height: 50px;
+  margin: 0 15px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.partner-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section */
+.about-section {
+  background-color: #34495e;
+  color: white;
+  padding: 40px 30px;
+}
+
+.about-heading {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #3498db;
+  position: relative;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.about-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 70px;
+  height: 3px;
+  background-color: #3498db;
+}
+
+.about-text {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #ecf0f1;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #1a252f;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-block {
+  flex: 1;
+  min-width: 250px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.footer-block-title {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #3498db;
+  position: relative;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.footer-block-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  background-color: #3498db;
+}
+
+.footer-text, .footer-link {
+  display: block;
+  color: #bdc3c7;
+  margin-bottom: 10px;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #3498db;
+  transform: translateX(5px);
+}
+
+.newsletter-form {
+  display: flex;
+  margin-top: 15px;
+}
+
+.newsletter-input {
+  flex: 3;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 15px;
+}
+
+.newsletter-input:focus {
+  outline: none;
+}
+
+.newsletter-btn {
+  flex: 1;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.newsletter-btn:hover {
+  background-color: #2980b9;
+}
+
+.copyright-text {
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 30px;
+  color: #7f8c8d;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .solar-category-container {
+      flex-direction: column;
+  }
   
+  .solar-category-box {
+      margin: 10px 0;
+  }
+  
+  .partners-section {
+      flex-direction: column;
+  }
+  
+  .partners-heading {
+      margin-bottom: 15px;
+      margin-right: 0;
+  }
+  
+  .site-footer {
+      flex-direction: column;
+  }
+  
+  .footer-block {
+      margin-bottom: 30px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.nepal-container {
+  max-width: 1800px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.sp_trusted_wrapper * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sp_trusted_body {
+  font-family: Arial, sans-serif;
+}
+
+.sp_trusted_partners_section {
+  background-color: #e0e0e0;
+  padding: 20px 0;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.sp_trusted_partners_title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.sp_trusted_partners_container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.sp_trusted_partners_scroll {
+  display: inline-block;
+  animation: sp_trusted_scroll 30s linear infinite;
+  padding-right: 50px;
+}
+
+.sp_trusted_partner_logo {
+  display: inline-block;
+  margin: 0 20px;
+  height: 80px;
+  vertical-align: middle;
+  filter: grayscale(0.2);
+  transition: filter 0.3s, transform 0.3s;
+}
+
+.sp_trusted_partner_logo:hover {
+  filter: grayscale(0);
+  transform: scale(1.05);
+}
+
+@keyframes sp_trusted_scroll {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+/* Dark overlay headers and footers */
+.sp_trusted_header, .sp_trusted_footer {
+  background-color: #333;
+  height: 10px;
+  width: 100%;
+}
