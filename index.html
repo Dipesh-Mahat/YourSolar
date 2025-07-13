@@ -123,7 +123,7 @@
                 <a href="index.html" class="active">Home</a>
                 <a href="#solutions">Solutions</a>
                 <a href="#about-us">About Us</a>
-                <a href="contact-us.html">Contact Us</a>
+                <a href="#footer">Contact Us</a>
                 <a href="dashboard.html">Dashboard</a>
               </div>
               <a href="#" class="login-btn btn btn-secondary" onclick="toggleLoginOverlay()">Get Started</a>
@@ -156,34 +156,34 @@
         </div>
           
         <!-- Solar Options -->
-        <div class="solar-category-container">
+        <section id="solutions" class="solar-category-container">
             <div class="solar-category-box">
                 <h3 class="solar-category-heading">Solar for Businesses</h3>
                 <p class="solar-category-text">Reduce operational costs with commercial solar installation. Save energy costs and reduce your carbon footprint.</p>
-                <a href="#" class="solar-action-btn">Explore Commercial Plan</a>
+                <a href="commercial.html" class="solar-action-btn">Explore Commercial Plan</a>
             </div>
             
             <div class="solar-category-box">
                 <h3 class="solar-category-heading">Solar for Communities</h3>
                 <p class="solar-category-text">Empower your neighborhood with community solar programs. Make solar affordable and accessible to everyone in your community.</p>
-                <a href="#" class="solar-action-btn">Explore Community Plan</a>
+                <a href="community.html" class="solar-action-btn">Explore Community Plan</a>
           </div>
           
             <div class="solar-category-box">
                 <h3 class="solar-category-heading">Solar for Homes</h3>
                 <p class="solar-category-text">Switch to solar power at your home and start saving immediately. Get a reliable and quality solar solution to power your household!</p>
-                <a href="#" class="solar-action-btn">Explore Home Plan</a>
+                <a href="house.html" class="solar-action-btn">Explore Home Plan</a>
             </div>
-          </div>
+          </section>
         
         <!-- Calculator -->
-        <div class="bill-calculator">
+        <section id="calculator" class="bill-calculator">
             <h3 class="calculator-heading">Calculate your monthly electric bill</h3>
             <input type="number" id="monthly-bill" class="calculator-input" placeholder="Enter monthly electricity bill">
             <input type="number" id="unit-rate" class="calculator-input" placeholder="Rate per unit in your area">
             <div id="calc-output" class="calculator-result">Output</div>
             <button id="calculate-btn" class="calculator-submit" onclick="calculateElectricBill()">Calculate</button>
-        </div>
+        </section>
         
         <!-- Partners --> 
           <body class="sp_trusted_body">
@@ -203,14 +203,14 @@
         </div>
         
         <!-- About -->
-        <div class="about-section">
+        <section id="about-us" class="about-section">
             <h3 class="about-heading">About us</h3>
             <p class="about-text">We are dedicated to promoting sustainable energy solutions by making high-quality solar power systems accessible and affordable for everyone. Our platform helps users monitor their solar energy usage, track savings, and get personalized insights. Whether for homes, businesses, or communities, we're empowering Nepal with clean, renewable energy for a brighter future. Our team of experts is committed to providing the best solar solutions tailored to Nepal's unique geography and energy needs.</p>
             <p class="about-text"></p>
-                  </div>
+        </section>
         
         <!-- Footer -->
-        <footer class="site-footer">
+        <footer id="footer" class="site-footer">
             <div class="footer-block">
                 <h3 class="footer-block-title">Your Solar</h3>
                 <p class="footer-text">Contact Information:</p>
@@ -223,10 +223,10 @@
               
             <div class="footer-block">
                 <h3 class="footer-block-title">Explore</h3>
-                <a href="#" class="footer-link">Commercial Solar</a>
-                <a href="#" class="footer-link">Community Solar</a>
-                <a href="#" class="footer-link">Residential Solar</a>
-                <a href="#" class="footer-link">Solar Financing</a>
+                <a href="commercial.html" class="footer-link">Commercial Solar</a>
+                <a href="community.html" class="footer-link">Community Solar</a>
+                <a href="house.html" class="footer-link">Residential Solar</a>
+                <a href="#solutions" class="footer-link">Solar Financing</a>
                 <a href="#" class="footer-link">Project Gallery</a>
               </div>
               
@@ -249,46 +249,49 @@
        // Array of solar company logos
        const sp_trusted_partners = [
             {
-                name: "Tesla",
-                logo: `<svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 0 342 35" width="200"><path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"/></svg>`,
-                url: "https://www.tesla.com/energy",
-                isHTML: true
+                name: "Tesla Energy",
+                logo: "https://cdn.worldvectorlogo.com/logos/tesla-9.svg",
+                url: "https://www.tesla.com/energy"
             },
             {
                 name: "SunPower",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/2/2e/SunPower_logo.svg",
-                url: "https://us.sunpower.com/",
-                isHTML: false
+                logo: "https://cdn.worldvectorlogo.com/logos/sunpower-2.svg",
+                url: "https://us.sunpower.com/"
             },
             {
-                name: "Enphase",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Enphase_Energy_logo.svg",
-                url: "https://enphase.com/",
-                isHTML: false
+                name: "Enphase Energy",
+                logo: "https://cdn.worldvectorlogo.com/logos/enphase-energy.svg",
+                url: "https://enphase.com/"
             },
             {
                 name: "First Solar",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/7/7e/First_Solar_logo.svg",
-                url: "https://www.firstsolar.com/",
-                isHTML: false
+                logo: "https://cdn.worldvectorlogo.com/logos/first-solar.svg",
+                url: "https://www.firstsolar.com/"
             },
             {
                 name: "Canadian Solar",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Canadian_Solar_logo.svg",
-                url: "https://www.canadiansolar.com/",
-                isHTML: false
+                logo: "https://cdn.worldvectorlogo.com/logos/canadian-solar.svg",
+                url: "https://www.canadiansolar.com/"
             },
             {
-                name: "JinkoSolar",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/JinkoSolar_logo.svg",
-                url: "https://www.jinkosolar.com/",
-                isHTML: false
+                name: "Jinko Solar",
+                logo: "https://cdn.worldvectorlogo.com/logos/jinkosolar.svg",
+                url: "https://www.jinkosolar.com/"
             },
             {
                 name: "Trina Solar",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Trina_Solar_logo.svg",
-                url: "https://www.trinasolar.com/",
-                isHTML: false
+                logo: "https://cdn.worldvectorlogo.com/logos/trina-solar.svg",
+                url: "https://www.trinasolar.com/"
+            },
+            {
+                name: "SolarEdge",
+                logo: "https://cdn.worldvectorlogo.com/logos/solaredge.svg",
+                url: "https://www.solaredge.com/"
+            },
+            {
+                name: "LG Solar",
+                logo: "https://cdn.worldvectorlogo.com/logos/lg-1.svg",
+                url: "https://www.lg.com/us/business/solar-panels"
             }
         ];
 
@@ -300,20 +303,18 @@
                 const logoLink = document.createElement('a');
                 logoLink.href = partner.url;
                 logoLink.target = '_blank';
-                let logoNode;
-                if (partner.isHTML) {
-                    logoNode = document.createElement('div');
-                    logoNode.className = "sp_trusted_partner_logo";
-                    logoNode.setAttribute("title", partner.name);
-                    logoNode.innerHTML = partner.logo;
-                } else {
-                    logoNode = document.createElement('img');
-                    logoNode.src = partner.logo;
-                    logoNode.alt = partner.name + " logo";
-                    logoNode.className = "sp_trusted_partner_logo";
-                    logoNode.setAttribute("title", partner.name);
-                }
-                logoLink.appendChild(logoNode);
+                logoLink.className = "sp_trusted_partner_logo";
+                logoLink.setAttribute("title", partner.name);
+                
+                const logoImg = document.createElement('img');
+                logoImg.src = partner.logo;
+                logoImg.alt = partner.name + " logo";
+                logoImg.onerror = function() {
+                    // Fallback if image fails to load
+                    this.src = `https://via.placeholder.com/150x80/f8f9fa/212121?text=${encodeURIComponent(partner.name)}`;
+                };
+                
+                logoLink.appendChild(logoImg);
                 container.appendChild(logoLink);
             });
         }
@@ -327,38 +328,100 @@
         (function addTrustedPartnersScrollCSS() {
             const style = document.createElement('style');
             style.innerHTML = `
+                .sp_trusted_partners_section {
+                    background-color: #f8f9fa;
+                    padding: 60px 40px;
+                    text-align: center;
+                    overflow-x: visible;
+                }
+                .sp_trusted_partners_title {
+                    font-size: 28px;
+                    color: #212121;
+                    margin-bottom: 40px;
+                    font-weight: 600;
+                }
                 .sp_trusted_partners_container {
                     width: 100%;
                     position: relative;
                     display: flex;
                     justify-content: center;
+                    max-width: 1400px;
+                    margin: 0 auto;
+                    overflow: visible;
+                    padding: 0 40px;
                 }
                 .sp_trusted_partners_scroll {
                     display: flex;
                     align-items: center;
-                    gap: 40px;
-                    flex-wrap: wrap;
+                    gap: 18px;
                     justify-content: center;
                     width: 100%;
+                    flex-wrap: nowrap;
+                    min-width: fit-content;
                 }
                 .sp_trusted_partner_logo {
                     display: flex;
                     align-items: center;
-                    height: 60px;
-                    padding: 0 20px;
-                    filter: grayscale(0.2);
-                    transition: filter 0.2s;
+                    justify-content: center;
+                    height: 80px;
+                    width: 140px;
+                    padding: 15px;
+                    background: white;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                    transition: all 0.3s ease;
+                    border: 1px solid #e9ecef;
+                    flex-shrink: 0;
+                }
+                .sp_trusted_partner_logo img {
+                    max-height: 100%;
+                    max-width: 100%;
+                    object-fit: contain;
+                    filter: grayscale(0.4);
+                    transition: filter 0.3s ease;
                 }
                 .sp_trusted_partner_logo:hover {
-                    filter: grayscale(0) drop-shadow(0 2px 8px #aaa);
+                    transform: translateY(-5px);
+                    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+                    border-color: #ffc107;
                 }
-                @media (max-width: 700px) {
+                .sp_trusted_partner_logo:hover img {
+                    filter: grayscale(0);
+                }
+                @media (max-width: 1000px) {
                     .sp_trusted_partners_scroll {
-                        gap: 20px;
+                        gap: 12px;
                     }
                     .sp_trusted_partner_logo {
-                        height: 40px;
+                        height: 70px;
+                        width: 110px;
+                        padding: 10px;
+                    }
+                    .sp_trusted_partners_container {
+                        padding: 0 30px;
+                    }
+                }
+                @media (max-width: 768px) {
+                    .sp_trusted_partners_scroll {
+                        gap: 12px;
+                        overflow-x: auto;
                         padding: 0 10px;
+                        justify-content: flex-start;
+                    }
+                    .sp_trusted_partner_logo {
+                        height: 60px;
+                        width: 100px;
+                        padding: 8px;
+                    }
+                    .sp_trusted_partners_title {
+                        font-size: 24px;
+                    }
+                    .sp_trusted_partners_container {
+                        padding: 0 20px;
+                        overflow-x: auto;
+                    }
+                    .sp_trusted_partners_section {
+                        padding: 60px 20px;
                     }
                 }
             `;
@@ -536,6 +599,42 @@
           outputDiv.style.backgroundColor = '#f8f9fa';
         }, 500);
       }
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Add scroll offset for fixed header if any
+      window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+        
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= (sectionTop - 200)) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href').slice(1) === current) {
+            link.classList.add('active');
+          }
+        });
+      });
     </script>
   </body>
 </html>
