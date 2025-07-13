@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YourSolar - Promoting Clean Energy Solutions</title>
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/globals.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   </head>
   <body>
@@ -147,16 +147,13 @@
         
   
 
-    <div class="nepal-container">
-        <!-- Map of Nepal -->
-        <div class="nepal-map-section">
-          <div class="nepal-map-container">
-      
-            <div class="nepal-map-display">
-              <img src="img/DALL·E 2025-03-24 08.54.31 - A wide digital illustration of Nepal's map designed for a solar panel website. The map retains the shape of Nepal and incorporates elements of solar p.webp" alt="Solar Energy Map of Nepal" class="nepal-map-image" style="max-width: 1400px; height: 400px; object-fit: contain; margin: 0 auto; display: block;">
+    <div class="solar-info-container">
+        <!-- Solar Info Section -->
+        <div class="solar-info-section">
+          <div class="solar-info-content">
+            <!-- Solar info image or content removed as requested -->
           </div>
-          </div>
-          </div>
+        </div>
           
         <!-- Solar Options -->
         <div class="solar-category-container">
@@ -252,109 +249,121 @@
        // Array of solar company logos
        const sp_trusted_partners = [
             {
-                name: "Tesla", 
-                logo: `<svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 0 342 35" width="200">
-                        <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"/>
-                      </svg>`, 
-                url: "#tesla",
+                name: "Tesla",
+                logo: `<svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 0 342 35" width="200"><path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"/></svg>`,
+                url: "https://www.tesla.com/energy",
                 isHTML: true
             },
             {
-                name: "Tesla", 
-                logo: `<svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 0 342 35" width="200">
-                        <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"/>
-                      </svg>`, 
-                url: "#tesla",
-                isHTML: true
-            },{
-                name: "Tesla", 
-                logo: `<svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 0 342 35" width="200">
-                        <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"/>
-                      </svg>`, 
-                url: "#tesla",
-                isHTML: true
-            },{
-                name: "Tesla", 
-                logo: `<svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 0 342 35" width="200">
-                        <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"/>
-                      </svg>`, 
-                url: "#tesla",
-                isHTML: true
-            },{
-                name: "Tesla", 
-                logo: `<svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 0 342 35" width="200">
-                        <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"/>
-                      </svg>`, 
-                url: "#tesla",
-                isHTML: true
-            },{
-                name: "Tesla", 
-                logo: `<svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 0 342 35" width="200">
-                        <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"/>
-                      </svg>`, 
-                url: "#tesla",
-                isHTML: true
-            },{
-                name: "Tesla", 
-                logo: `<svg xmlns="" height="80" viewBox="0 0 342 35" width="200">
-                        <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"/>
-                      </svg>`, 
-                url: "#tesla",
-                isHTML: true
-            },{
-                name: "Tesla", 
-                logo: `<svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 0 342 35" width="200">
-                        <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"/>
-                      </svg>`, 
-                url: "#tesla",
-                isHTML: true
+                name: "SunPower",
+                logo: "https://upload.wikimedia.org/wikipedia/commons/2/2e/SunPower_logo.svg",
+                url: "https://us.sunpower.com/",
+                isHTML: false
+            },
+            {
+                name: "Enphase",
+                logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Enphase_Energy_logo.svg",
+                url: "https://enphase.com/",
+                isHTML: false
+            },
+            {
+                name: "First Solar",
+                logo: "https://upload.wikimedia.org/wikipedia/commons/7/7e/First_Solar_logo.svg",
+                url: "https://www.firstsolar.com/",
+                isHTML: false
+            },
+            {
+                name: "Canadian Solar",
+                logo: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Canadian_Solar_logo.svg",
+                url: "https://www.canadiansolar.com/",
+                isHTML: false
+            },
+            {
+                name: "JinkoSolar",
+                logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/JinkoSolar_logo.svg",
+                url: "https://www.jinkosolar.com/",
+                isHTML: false
+            },
+            {
+                name: "Trina Solar",
+                logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Trina_Solar_logo.svg",
+                url: "https://www.trinasolar.com/",
+                isHTML: false
             }
         ];
 
         // Function to populate the scrolling section
         function sp_trusted_populatePartners() {
-            const scrollContainer = document.getElementById('sp_trusted_partners_scroll');
-            
-            // Add each partner twice to ensure smooth continuous scrolling
-            for (let i = 0; i < 2; i++) {
-                sp_trusted_partners.forEach(partner => {
-                    const logoLink = document.createElement('a');
-                    logoLink.href = partner.url;
-                    
-                    if (partner.isHTML) {
-                        // For partners with SVG/HTML logos (like Tesla)
-                        const logoContainer = document.createElement('div');
-                        logoContainer.className = "sp_trusted_partner_logo";
-                        logoContainer.setAttribute("title", partner.name);
-                        logoContainer.innerHTML = partner.logo;
-                        logoLink.appendChild(logoContainer);
-                    } else {
-                        // For partners with image URLs
-                        const logo = document.createElement('img');
-                        logo.src = partner.logo;
-                        logo.alt = partner.name + " logo";
-                        logo.className = "sp_trusted_partner_logo";
-                        logo.setAttribute("title", partner.name);
-                        logoLink.appendChild(logo);
-                    }
-                    
-                    scrollContainer.appendChild(logoLink);
-                });
-            }
+            const container = document.getElementById('sp_trusted_partners_scroll');
+            container.innerHTML = '';
+            sp_trusted_partners.forEach(partner => {
+                const logoLink = document.createElement('a');
+                logoLink.href = partner.url;
+                logoLink.target = '_blank';
+                let logoNode;
+                if (partner.isHTML) {
+                    logoNode = document.createElement('div');
+                    logoNode.className = "sp_trusted_partner_logo";
+                    logoNode.setAttribute("title", partner.name);
+                    logoNode.innerHTML = partner.logo;
+                } else {
+                    logoNode = document.createElement('img');
+                    logoNode.src = partner.logo;
+                    logoNode.alt = partner.name + " logo";
+                    logoNode.className = "sp_trusted_partner_logo";
+                    logoNode.setAttribute("title", partner.name);
+                }
+                logoLink.appendChild(logoNode);
+                container.appendChild(logoLink);
+            });
         }
 
         // Initialize on page load
         window.addEventListener('load', sp_trusted_populatePartners);
 
         // Pause animation on hover
-        const sp_trusted_scrollElement = document.querySelector('.sp_trusted_partners_scroll');
-        document.querySelector('.sp_trusted_partners_container').addEventListener('mouseenter', () => {
-            sp_trusted_scrollElement.style.animationPlayState = 'paused';
-        });
+
         
-        document.querySelector('.sp_trusted_partners_container').addEventListener('mouseleave', () => {
-            sp_trusted_scrollElement.style.animationPlayState = 'running';
-        });
+        (function addTrustedPartnersScrollCSS() {
+            const style = document.createElement('style');
+            style.innerHTML = `
+                .sp_trusted_partners_container {
+                    width: 100%;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                }
+                .sp_trusted_partners_scroll {
+                    display: flex;
+                    align-items: center;
+                    gap: 40px;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    width: 100%;
+                }
+                .sp_trusted_partner_logo {
+                    display: flex;
+                    align-items: center;
+                    height: 60px;
+                    padding: 0 20px;
+                    filter: grayscale(0.2);
+                    transition: filter 0.2s;
+                }
+                .sp_trusted_partner_logo:hover {
+                    filter: grayscale(0) drop-shadow(0 2px 8px #aaa);
+                }
+                @media (max-width: 700px) {
+                    .sp_trusted_partners_scroll {
+                        gap: 20px;
+                    }
+                    .sp_trusted_partner_logo {
+                        height: 40px;
+                        padding: 0 10px;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        })();
         
         document.addEventListener('DOMContentLoaded', function() {
             // Map image loading functionality
