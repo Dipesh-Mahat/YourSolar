@@ -4,8 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Residential Solar Solutions | YourSolar</title>
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="house.css" />
+    <link rel="stylesheet" href="css/globals.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/house.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   </head>
   <body>
@@ -24,12 +25,12 @@
               </div>
               <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="#solutions">Solutions</a>
-                <a href="#about-us" class="active">Residential</a>
-                <a href="contact-us.html">Contact Us</a>
+                <a href="index.html#solutions">Solutions</a>
+                <a href="index.html#about-us">About Us</a>
+                <a href="index.html#footer">Contact Us</a>
                 <a href="dashboard.html">Dashboard</a>
               </div>
-              <a href="login.html" class="login-btn btn btn-secondary">Get Started</a>
+              <a href="index.html" class="login-btn btn btn-secondary">Get Started</a>
             </nav>
           </div>
         </header>
@@ -225,49 +226,29 @@
           </div>
         </div>
         
-        <footer class="footer">
+        <footer id="footer" class="simple-footer">
           <div class="container">
-            <div class="footer-content">
-              <div class="footer-logo">YourSolar</div>
-              <div class="footer-links-section">
-                <h4>Explore</h4>
-                <div class="footer-links">
-                  <a href="commercial.html">Commercial Solar</a>
-                  <a href="house.html">Residential Solar</a>
-                  <a href="community.html">Community Solar</a>
-                </div>
-              </div>
-              <div class="contact-info">
-                <h4>Contact Information</h4>
-                <p>Address: Kathmandu, Nepal</p>
-                <p>Email: support@yoursolar.com</p>
-                <p>Phone: +977-123456789</p>
-              </div>
-              <div class="social-links">
-                <h4>Social Media Links</h4>
-                <div class="social-icons">
-                  <a href="#"><i class="fab fa-facebook"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-linkedin"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-              </div>
-              <div class="newsletter">
-                <h4>Stay Connected</h4>
-                <p>Subscribe to our newsletter to get the latest updates and news on our activities.</p>
-                <div class="newsletter-form">
-                  <input type="email" placeholder="Enter Email" class="email-input">
-                  <button type="submit" class="submit-btn">Submit</button>
-                </div>
-              </div>
-              <p class="copyright">© 2025 YourSolar | All Rights Reserved</p>
-            </div>
+            <p>© 2025 YourSolar | All Rights Reserved</p>
           </div>
         </footer>
       </div>
     </div>
     
     <script>
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
       // Simple toggle for FAQ items
       document.addEventListener('DOMContentLoaded', function() {
         const faqQuestions = document.querySelectorAll('.faq-question');
