@@ -14,9 +14,92 @@ body {
   overflow-x: hidden;
 }
 
+/* Dark mode (default) */
 body {
   color: rgb(255, 255, 255);
   background: #0A0A0A;
+}
+
+/* Light mode overrides */
+html:not(.dark) body {
+  color: rgb(17, 24, 39);
+  background: #ffffff;
+}
+
+html:not(.dark) .solar-card {
+  background: #f9fafb;
+  border-color: #e5e7eb;
+}
+
+html:not(.dark) .solar-card-hover {
+  background: #f9fafb;
+  border-color: #e5e7eb;
+}
+
+html:not(.dark) .solar-card-hover:hover {
+  border-color: #FFD700;
+}
+
+html:not(.dark) h1,
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) h4,
+html:not(.dark) h5,
+html:not(.dark) h6 {
+  color: rgb(17, 24, 39);
+}
+
+html:not(.dark) .text-white {
+  color: rgb(17, 24, 39);
+}
+
+html:not(.dark) .text-gray-300 {
+  color: rgb(55, 65, 81);
+}
+
+html:not(.dark) .text-gray-400 {
+  color: rgb(107, 114, 128);
+}
+
+html:not(.dark) .text-gray-500 {
+  color: rgb(107, 114, 128);
+}
+
+html:not(.dark) .text-gray-600 {
+  color: rgb(75, 85, 99);
+}
+
+html:not(.dark) .bg-solar-black {
+  background: #ffffff;
+}
+
+html:not(.dark) .bg-solar-gray-dark {
+  background: #f9fafb;
+  border-color: #e5e7eb;
+}
+
+html:not(.dark) .bg-solar-gray-light {
+  background: #f3f4f6;
+}
+
+html:not(.dark) .border-solar-gray-light {
+  border-color: #e5e7eb;
+}
+
+html:not(.dark) nav {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: #e5e7eb;
+}
+
+html:not(.dark) .bg-black {
+  background: #f9fafb;
+}
+
+html:not(.dark) input,
+html:not(.dark) select,
+html:not(.dark) textarea {
+  background: #f3f4f6;
+  color: rgb(17, 24, 39);
 }
 
 a {
