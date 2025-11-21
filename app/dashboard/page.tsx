@@ -123,8 +123,8 @@ export default function DashboardPage() {
 
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {stats.map((stat, index) => (
-          <div key={index} className="solar-card">
+        {stats.map((stat) => (
+          <div key={stat.label} className="solar-card">
             <div className="flex items-center justify-between mb-4">
               <stat.icon className="w-10 h-10 text-solar-yellow" />
               <span className={`flex items-center gap-1 text-sm font-semibold ${

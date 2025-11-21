@@ -1,10 +1,22 @@
 'use client'
 
 import { Zap, TrendingUp, TrendingDown, Activity } from 'lucide-react'
-import { Line, Doughnut } from 'react-chartjs-2'
+import { Doughnut } from 'react-chartjs-2'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
 
 ChartJS.register(ArcElement, Tooltip, Legend)
+
+function getStatColorClass(color: string) {
+  if (color === 'green') return 'text-green-500'
+  if (color === 'blue') return 'text-blue-500'
+  return 'text-solar-yellow'
+}
+
+function getActivityColorClass(type: string) {
+  if (type === 'success') return 'text-green-500'
+  if (type === 'warning') return 'text-yellow-500'
+  return 'text-blue-500'
+}
 
 export default function EnergyPage() {
   const energyFlowData = {
@@ -39,16 +51,12 @@ export default function EnergyPage() {
           { label: 'Today\'s Energy', value: '42.5 kWh', status: '+12.3%', color: 'blue' },
           { label: 'Grid Status', value: 'Export', status: '1.2 kW surplus', color: 'yellow' },
           { label: 'Efficiency', value: '94.2%', status: 'Excellent', color: 'green' },
-        ].map((stat, index) => (
-          <div key={index} className="solar-card">
+        ].map((stat) => (
+          <div key={stat.label} className="solar-card">
             <Zap className="w-8 h-8 text-solar-yellow mb-3" />
             <p className="text-gray-400 text-sm mb-1">{stat.label}</p>
             <p className="text-2xl font-bold text-white mb-1">{stat.value}</p>
-            <p className={`text-sm font-semibold ${
-              stat.color === 'green' ? 'text-green-500' : 
-              stat.color === 'blue' ? 'text-blue-500' : 
-              'text-solar-yellow'
-            }`}>
+            <p className={`text-sm font-semibold ${getStatColorClass(stat.color)}`}>
               {stat.status}
             </p>
           </div>
@@ -181,13 +189,9 @@ export default function EnergyPage() {
             { time: '5 hours ago', message: 'Grid export started (surplus energy)', type: 'info' },
             { time: 'Yesterday', message: 'Daily production goal achieved', type: 'success' },
             { time: '2 days ago', message: 'Weather forecast: Cloudy conditions expected', type: 'warning' },
-          ].map((activity, index) => (
-            <div key={index} className="flex items-start gap-3 p-3 bg-solar-gray-light rounded-lg">
-              <Activity className={`mt-1 ${
-                activity.type === 'success' ? 'text-green-500' :
-                activity.type === 'warning' ? 'text-yellow-500' :
-                'text-blue-500'
-              }`} size={20} />
+          ].map((activity) => (
+            <div key={activity.time + activity.message} className="flex items-start gap-3 p-3 bg-solar-gray-light rounded-lg">
+              <Activity className={`mt-1 ${getActivityColorClass(activity.type)}`} size={20} />
               <div className="flex-1">
                 <p className="text-white">{activity.message}</p>
                 <p className="text-gray-400 text-sm">{activity.time}</p>

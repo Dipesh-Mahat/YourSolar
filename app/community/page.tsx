@@ -1,6 +1,6 @@
 'use client'
 
-import { Users, Heart, TrendingUp, Globe, MapPin, CheckCircle, DollarSign, Shield, Leaf } from 'lucide-react'
+import { Users, Globe, MapPin, CheckCircle, DollarSign, Shield, Leaf } from 'lucide-react'
 import PublicNav from '@/components/PublicNav'
 
 export default function CommunityPage() {
@@ -45,8 +45,8 @@ export default function CommunityPage() {
             { step: 2, title: 'Farm Generates', desc: 'Solar farm produces clean energy' },
             { step: 3, title: 'Get Credits', desc: 'Receive credits on your bill' },
             { step: 4, title: 'Save Money', desc: 'Pay less than standard rates' },
-          ].map((item, index) => (
-            <div key={index} className="text-center">
+          ].map((item) => (
+            <div key={item.step} className="text-center">
               <div className="w-16 h-16 bg-solar-yellow rounded-full flex items-center justify-center text-2xl font-bold text-solar-black mx-auto mb-4">
                 {item.step}
               </div>
@@ -83,8 +83,8 @@ export default function CommunityPage() {
               subscribers: 580,
               availability: '8%',
             },
-          ].map((project, index) => (
-            <div key={index} className="bg-solar-gray-light rounded-lg p-6">
+          ].map((project) => (
+            <div key={project.name} className="bg-solar-gray-light rounded-lg p-6">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">{project.name}</h3>
@@ -94,7 +94,7 @@ export default function CommunityPage() {
                   </div>
                 </div>
                 <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                  parseInt(project.availability) > 15 
+                  Number.parseInt(project.availability) > 15 
                     ? 'bg-green-500/20 text-green-500' 
                     : 'bg-orange-500/20 text-orange-500'
                 }`}>
@@ -144,8 +144,8 @@ export default function CommunityPage() {
               savings: '$100-150',
               features: ['Maximum savings', 'Multi-family homes', 'Dedicated manager'],
             },
-          ].map((plan, index) => (
-            <div key={index} className={`bg-solar-gray-light rounded-lg p-6 ${
+          ].map((plan) => (
+            <div key={plan.name} className={`bg-solar-gray-light rounded-lg p-6 ${
               plan.popular ? 'ring-2 ring-solar-yellow' : ''
             }`}>
               {plan.popular && (
@@ -163,8 +163,8 @@ export default function CommunityPage() {
                 </p>
               </div>
               <ul className="space-y-2 mb-6">
-                {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-2 text-gray-300">
+                {plan.features.map((feature) => (
+                  <li key={feature} className="flex items-center gap-2 text-gray-300">
                     <CheckCircle size={16} className="text-solar-yellow" />
                     {feature}
                   </li>

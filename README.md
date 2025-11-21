@@ -66,4 +66,4 @@ Visit `http://localhost:3000`
 
 ---
 
-**Built by Dipesh Mahat** • Kathmandu, Nepal ☀️
+**Built by Dipesh Mahat** ☀️

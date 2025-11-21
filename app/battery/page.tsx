@@ -1,6 +1,6 @@
 'use client'
 
-import { Battery, Zap, TrendingUp, AlertCircle, CheckCircle } from 'lucide-react'
+import { Battery, AlertCircle, CheckCircle } from 'lucide-react'
 import { Line } from 'react-chartjs-2'
 
 export default function BatteryPage() {
@@ -165,9 +165,9 @@ export default function BatteryPage() {
               desc: 'Maintain minimum charge for outages',
               active: false 
             },
-          ].map((mode, index) => (
+          ].map((mode) => (
             <button
-              key={index}
+              key={mode.name}
               className={`p-4 rounded-lg text-left transition-all ${
                 mode.active 
                   ? 'bg-solar-yellow text-solar-black' 

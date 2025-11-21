@@ -107,8 +107,8 @@ export default function WeatherPage() {
 
       {/* Weekly Forecast Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {weekForecast.map((day, index) => (
-          <div key={index} className="solar-card">
+        {weekForecast.map((day) => (
+          <div key={day.day} className="solar-card">
             <div className="flex justify-between items-start mb-3">
               <div>
                 <p className="text-white font-semibold">{day.day}</p>

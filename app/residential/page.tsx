@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Home, DollarSign, TrendingUp, Battery, CheckCircle, Zap, Shield, Leaf, Sun, Calculator } from 'lucide-react'
+import { Home, DollarSign, TrendingUp, Battery, CheckCircle, Leaf, Calculator } from 'lucide-react'
 import PublicNav from '@/components/PublicNav'
 
 export default function ResidentialPage() {
@@ -80,7 +80,7 @@ export default function ResidentialPage() {
                 max="15"
                 step="0.5"
                 value={systemSize}
-                onChange={(e) => setSystemSize(parseFloat(e.target.value))}
+                onChange={(e) => setSystemSize(Number.parseFloat(e.target.value))}
                 className="w-full h-2 bg-solar-gray-light rounded-lg appearance-none cursor-pointer accent-solar-yellow"
               />
             </div>
@@ -94,7 +94,7 @@ export default function ResidentialPage() {
                 max="500"
                 step="10"
                 value={monthlyBill}
-                onChange={(e) => setMonthlyBill(parseInt(e.target.value))}
+                onChange={(e) => setMonthlyBill(Number.parseInt(e.target.value))}
                 className="w-full h-2 bg-solar-gray-light rounded-lg appearance-none cursor-pointer accent-solar-yellow"
               />
             </div>
@@ -139,8 +139,8 @@ export default function ResidentialPage() {
             'Maintenance & support',
             'Federal tax credit eligible',
             'Net metering setup',
-          ].map((feature, index) => (
-            <div key={index} className="flex items-center gap-3">
+          ].map((feature) => (
+            <div key={feature} className="flex items-center gap-3">
               <CheckCircle className="text-solar-yellow flex-shrink-0" size={20} />
               <span className="text-gray-300">{feature}</span>
             </div>

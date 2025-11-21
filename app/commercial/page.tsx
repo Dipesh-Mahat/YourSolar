@@ -83,7 +83,7 @@ export default function CommercialPage() {
                 max="500"
                 step="10"
                 value={businessSize}
-                onChange={(e) => setBusinessSize(parseFloat(e.target.value))}
+                onChange={(e) => setBusinessSize(Number.parseFloat(e.target.value))}
                 className="w-full h-2 bg-solar-gray-light rounded-lg appearance-none cursor-pointer accent-solar-yellow"
               />
             </div>
@@ -97,7 +97,7 @@ export default function CommercialPage() {
                 max="50000"
                 step="500"
                 value={monthlyBill}
-                onChange={(e) => setMonthlyBill(parseInt(e.target.value))}
+                onChange={(e) => setMonthlyBill(Number.parseInt(e.target.value))}
                 className="w-full h-2 bg-solar-gray-light rounded-lg appearance-none cursor-pointer accent-solar-yellow"
               />
             </div>
@@ -150,12 +150,12 @@ export default function CommercialPage() {
               industry: 'Agriculture',
               features: ['Irrigation pumping', 'Cold storage power', 'Agrivoltaics options'],
             },
-          ].map((solution, index) => (
-            <div key={index} className="bg-solar-gray-light rounded-lg p-6">
+          ].map((solution) => (
+            <div key={solution.industry} className="bg-solar-gray-light rounded-lg p-6">
               <h3 className="text-xl font-bold text-solar-yellow mb-4">{solution.industry}</h3>
               <ul className="space-y-2">
-                {solution.features.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-2 text-gray-300">
+                {solution.features.map((feature) => (
+                  <li key={feature} className="flex items-center gap-2 text-gray-300">
                     <CheckCircle size={16} className="text-solar-yellow flex-shrink-0" />
                     {feature}
                   </li>
@@ -183,8 +183,8 @@ export default function CommercialPage() {
             'EV charging integration',
             'Demand response capabilities',
             'Carbon credit tracking',
-          ].map((feature, index) => (
-            <div key={index} className="flex items-center gap-3">
+          ].map((feature) => (
+            <div key={feature} className="flex items-center gap-3">
               <CheckCircle className="text-solar-yellow flex-shrink-0" size={20} />
               <span className="text-gray-300">{feature}</span>
             </div>

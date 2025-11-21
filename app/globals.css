@@ -128,7 +128,7 @@ html:not(.dark) .text-solar-yellow {
 
 html:not(.dark) .btn-primary {
   background: #d97706;
-  color: #ffffff;
+  color: #1f2937;
 }
 
 html:not(.dark) .btn-primary:hover {
@@ -142,7 +142,7 @@ html:not(.dark) .btn-secondary {
 
 html:not(.dark) .btn-secondary:hover {
   background: #d97706;
-  color: #ffffff;
+  color: #1f2937;
 }
 
 a {

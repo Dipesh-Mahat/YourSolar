@@ -65,9 +65,10 @@ export default function SettingsPage() {
         
         <div className="space-y-4">
           <div className="p-4 bg-solar-gray-light rounded-lg">
-            <label className="block text-white font-semibold mb-2">Battery Reserve Level</label>
+            <label htmlFor="battery-reserve" className="block text-white font-semibold mb-2">Battery Reserve Level</label>
             <p className="text-gray-400 text-sm mb-3">Minimum battery charge to maintain</p>
-            <input 
+            <input
+              id="battery-reserve" 
               type="range" 
               min="10" 
               max="50" 
@@ -82,9 +83,9 @@ export default function SettingsPage() {
           </div>
 
           <div className="p-4 bg-solar-gray-light rounded-lg">
-            <label className="block text-white font-semibold mb-2">Grid Export Limit</label>
+            <label htmlFor="grid-export" className="block text-white font-semibold mb-2">Grid Export Limit</label>
             <p className="text-gray-400 text-sm mb-3">Maximum power to export to grid</p>
-            <select className="w-full bg-solar-gray-medium text-white px-4 py-2 rounded-lg border border-solar-gray-light focus:outline-none focus:ring-2 focus:ring-solar-yellow">
+            <select id="grid-export" className="w-full bg-solar-gray-medium text-white px-4 py-2 rounded-lg border border-solar-gray-light focus:outline-none focus:ring-2 focus:ring-solar-yellow">
               <option>No Limit</option>
               <option>5 kW</option>
               <option>10 kW</option>
@@ -93,9 +94,9 @@ export default function SettingsPage() {
           </div>
 
           <div className="p-4 bg-solar-gray-light rounded-lg">
-            <label className="block text-white font-semibold mb-2">Operating Mode</label>
+            <label htmlFor="operating-mode" className="block text-white font-semibold mb-2">Operating Mode</label>
             <p className="text-gray-400 text-sm mb-3">How your system manages energy</p>
-            <select className="w-full bg-solar-gray-medium text-white px-4 py-2 rounded-lg border border-solar-gray-light focus:outline-none focus:ring-2 focus:ring-solar-yellow">
+            <select id="operating-mode" className="w-full bg-solar-gray-medium text-white px-4 py-2 rounded-lg border border-solar-gray-light focus:outline-none focus:ring-2 focus:ring-solar-yellow">
               <option>Self-Consumption</option>
               <option>Time-of-Use Optimization</option>
               <option>Backup Priority</option>
@@ -118,9 +119,9 @@ export default function SettingsPage() {
             { name: 'Dark (Blue)', color: 'bg-blue-500', active: false },
             { name: 'Dark (Green)', color: 'bg-green-500', active: false },
             { name: 'Light Mode', color: 'bg-gray-200', active: false },
-          ].map((theme, index) => (
+          ].map((theme) => (
             <button
-              key={index}
+              key={theme.name}
               className={`p-4 rounded-lg border-2 transition-all ${
                 theme.active 
                   ? 'border-solar-yellow bg-solar-gray-light' 
@@ -143,8 +144,8 @@ export default function SettingsPage() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-white font-semibold mb-2">Language</label>
-            <select className="w-full bg-solar-gray-light text-white px-4 py-2 rounded-lg border border-solar-gray-medium focus:outline-none focus:ring-2 focus:ring-solar-yellow">
+            <label htmlFor="language" className="block text-white font-semibold mb-2">Language</label>
+            <select id="language" className="w-full bg-solar-gray-light text-white px-4 py-2 rounded-lg border border-solar-gray-medium focus:outline-none focus:ring-2 focus:ring-solar-yellow">
               <option>English (US)</option>
               <option>Español</option>
               <option>Français</option>
@@ -153,8 +154,8 @@ export default function SettingsPage() {
           </div>
           
           <div>
-            <label className="block text-white font-semibold mb-2">Timezone</label>
-            <select className="w-full bg-solar-gray-light text-white px-4 py-2 rounded-lg border border-solar-gray-medium focus:outline-none focus:ring-2 focus:ring-solar-yellow">
+            <label htmlFor="timezone" className="block text-white font-semibold mb-2">Timezone</label>
+            <select id="timezone" className="w-full bg-solar-gray-light text-white px-4 py-2 rounded-lg border border-solar-gray-medium focus:outline-none focus:ring-2 focus:ring-solar-yellow">
               <option>Pacific Time (PT)</option>
               <option>Mountain Time (MT)</option>
               <option>Central Time (CT)</option>
@@ -163,16 +164,16 @@ export default function SettingsPage() {
           </div>
           
           <div>
-            <label className="block text-white font-semibold mb-2">Units</label>
-            <select className="w-full bg-solar-gray-light text-white px-4 py-2 rounded-lg border border-solar-gray-medium focus:outline-none focus:ring-2 focus:ring-solar-yellow">
+            <label htmlFor="units" className="block text-white font-semibold mb-2">Units</label>
+            <select id="units" className="w-full bg-solar-gray-light text-white px-4 py-2 rounded-lg border border-solar-gray-medium focus:outline-none focus:ring-2 focus:ring-solar-yellow">
               <option>Imperial (°F, mi)</option>
               <option>Metric (°C, km)</option>
             </select>
           </div>
           
           <div>
-            <label className="block text-white font-semibold mb-2">Currency</label>
-            <select className="w-full bg-solar-gray-light text-white px-4 py-2 rounded-lg border border-solar-gray-medium focus:outline-none focus:ring-2 focus:ring-solar-yellow">
+            <label htmlFor="currency" className="block text-white font-semibold mb-2">Currency</label>
+            <select id="currency" className="w-full bg-solar-gray-light text-white px-4 py-2 rounded-lg border border-solar-gray-medium focus:outline-none focus:ring-2 focus:ring-solar-yellow">
               <option>USD ($)</option>
               <option>EUR (€)</option>
               <option>GBP (£)</option>

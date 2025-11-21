@@ -105,8 +105,8 @@ export default function ProfilePage() {
           { label: 'CO₂ Offset', value: '8.7 tons', icon: '🌱' },
           { label: 'Money Saved', value: '$4,652', icon: '💰' },
           { label: 'Trees Equivalent', value: '195 trees', icon: '🌳' },
-        ].map((stat, index) => (
-          <div key={index} className="solar-card text-center">
+        ].map((stat) => (
+          <div key={stat.label} className="solar-card text-center">
             <div className="text-4xl mb-3">{stat.icon}</div>
             <p className="text-gray-400 text-sm mb-1">{stat.label}</p>
             <p className="text-2xl font-bold text-white">{stat.value}</p>
@@ -155,9 +155,9 @@ export default function ProfilePage() {
               earned: false,
               icon: '👥' 
             },
-          ].map((achievement, index) => (
+          ].map((achievement) => (
             <div 
-              key={index} 
+              key={achievement.title} 
               className={`p-4 rounded-lg border ${
                 achievement.earned 
                   ? 'bg-solar-gray-light border-solar-yellow' 
@@ -186,8 +186,8 @@ export default function ProfilePage() {
             { action: 'Viewed monthly report', date: '1 day ago' },
             { action: 'Contacted support', date: '3 days ago' },
             { action: 'Changed notification preferences', date: '1 week ago' },
-          ].map((activity, index) => (
-            <div key={index} className="flex justify-between items-center p-3 bg-solar-gray-light rounded-lg">
+          ].map((activity) => (
+            <div key={activity.action + activity.date} className="flex justify-between items-center p-3 bg-solar-gray-light rounded-lg">
               <span className="text-white">{activity.action}</span>
               <span className="text-gray-400 text-sm">{activity.date}</span>
             </div>
