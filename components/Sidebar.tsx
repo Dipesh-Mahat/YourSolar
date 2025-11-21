@@ -14,16 +14,28 @@ import {
   Settings,
   Sun,
   Menu,
-  X
+  X,
+  LogOut
 } from 'lucide-react'
 import { useState } from 'react'
 
-const navigation = [
+interface NavItem {
+  name: string
+  href: string
+  icon: React.ElementType
+}
+
+// Public navigation (before login)
+const publicNavigation: NavItem[] = [
   { name: 'Home', href: '/', icon: Home },
-  { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
   { name: 'Residential', href: '/residential', icon: Home },
   { name: 'Commercial', href: '/commercial', icon: Building2 },
   { name: 'Community', href: '/community', icon: Users },
+]
+
+// Dashboard navigation (after login)
+const dashboardNavigation: NavItem[] = [
+  { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
   { name: 'Energy', href: '/energy', icon: Zap },
   { name: 'Battery', href: '/battery', icon: Battery },
   { name: 'Weather', href: '/weather', icon: Cloud },
@@ -34,6 +46,16 @@ const navigation = [
 export default function Sidebar() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
+  
+  // Determine if user is on dashboard pages
+  const isDashboardPage = pathname.startsWith('/dashboard') || 
+                          pathname.startsWith('/energy') || 
+                          pathname.startsWith('/battery') || 
+                          pathname.startsWith('/weather') || 
+                          pathname.startsWith('/profile') || 
+                          pathname.startsWith('/settings')
+
+  const navigation = isDashboardPage ? dashboardNavigation : publicNavigation
 
   return (
     <>
@@ -41,15 +63,18 @@ export default function Sidebar() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-lg bg-solar-gray-dark text-solar-yellow"
+        aria-label="Toggle menu"
       >
         {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
       {/* Overlay */}
       {isOpen && (
-        <div
+        <button
           className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={() => setIsOpen(false)}
+          onKeyDown={(e) => e.key === 'Escape' && setIsOpen(false)}
+          aria-label="Close menu"
         />
       )}
 
@@ -63,10 +88,10 @@ export default function Sidebar() {
       >
         <div className="flex flex-col h-full">
           {/* Logo */}
-          <div className="flex items-center gap-2 p-6 border-b border-solar-gray-light">
+          <Link href="/" className="flex items-center gap-2 p-6 border-b border-solar-gray-light hover:bg-solar-gray-light transition-colors">
             <Sun className="w-8 h-8 text-solar-yellow" />
             <span className="text-xl font-bold text-solar-yellow">YourSolar</span>
-          </div>
+          </Link>
 
           {/* Navigation */}
           <nav className="flex-1 overflow-y-auto py-4">
@@ -93,6 +118,31 @@ export default function Sidebar() {
                 )
               })}
             </ul>
+
+            {/* Dashboard login/logout button */}
+            {isDashboardPage ? (
+              <div className="px-3 mt-6">
+                <Link
+                  href="/"
+                  className="flex items-center gap-3 px-4 py-3 rounded-lg bg-red-500/20 text-red-400 font-semibold hover:bg-red-500/30 transition-all"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <LogOut size={20} />
+                  <span>Logout</span>
+                </Link>
+              </div>
+            ) : (
+              <div className="px-3 mt-6">
+                <Link
+                  href="/dashboard"
+                  className="flex items-center gap-3 px-4 py-3 rounded-lg bg-solar-yellow text-solar-black font-semibold hover:bg-solar-yellow-dark transition-all"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <LayoutDashboard size={20} />
+                  <span>Login to Dashboard</span>
+                </Link>
+              </div>
+            )}
           </nav>
 
           {/* Footer */}

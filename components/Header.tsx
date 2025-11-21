@@ -2,9 +2,22 @@
 
 import { Bell, Search, User } from 'lucide-react'
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 
 export default function Header() {
   const [searchQuery, setSearchQuery] = useState('')
+  const pathname = usePathname()
+  
+  // Show header only on dashboard pages
+  const isDashboardPage = pathname.startsWith('/dashboard') || 
+                          pathname.startsWith('/energy') || 
+                          pathname.startsWith('/battery') || 
+                          pathname.startsWith('/weather') || 
+                          pathname.startsWith('/profile') || 
+                          pathname.startsWith('/settings')
+
+  if (!isDashboardPage) return null
 
   return (
     <header className="bg-solar-gray-dark border-b border-solar-gray-light px-6 py-4">
@@ -26,18 +39,18 @@ export default function Header() {
         {/* Right section */}
         <div className="flex items-center gap-4 ml-6">
           {/* Notifications */}
-          <button className="relative p-2 rounded-lg hover:bg-solar-gray-light transition-colors">
+          <button className="relative p-2 rounded-lg hover:bg-solar-gray-light transition-colors" aria-label="Notifications">
             <Bell size={20} className="text-gray-300" />
             <span className="absolute top-1 right-1 w-2 h-2 bg-solar-yellow rounded-full"></span>
           </button>
 
           {/* User profile */}
-          <button className="flex items-center gap-2 p-2 rounded-lg hover:bg-solar-gray-light transition-colors">
+          <Link href="/profile" className="flex items-center gap-2 p-2 rounded-lg hover:bg-solar-gray-light transition-colors">
             <div className="w-8 h-8 bg-solar-yellow rounded-full flex items-center justify-center">
               <User size={18} className="text-solar-black" />
             </div>
-            <span className="text-gray-300 text-sm hidden sm:block">John Doe</span>
-          </button>
+            <span className="text-gray-300 text-sm hidden sm:block">Dipesh Mahat</span>
+          </Link>
         </div>
       </div>
     </header>

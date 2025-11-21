@@ -22,8 +22,8 @@ export default function ProfilePage() {
           <div className="flex-1">
             <div className="flex justify-between items-start mb-4">
               <div>
-                <h2 className="text-2xl font-bold text-white mb-2">John Doe</h2>
-                <p className="text-gray-400">Premium Member since 2023</p>
+                <h2 className="text-2xl font-bold text-white mb-2">Dipesh Mahat</h2>
+                <p className="text-gray-400">Premium Member since 2024</p>
               </div>
               <button className="btn-primary flex items-center gap-2">
                 <Edit size={18} /> Edit Profile
@@ -35,7 +35,7 @@ export default function ProfilePage() {
                 <Mail className="text-solar-yellow" size={20} />
                 <div>
                   <p className="text-gray-400 text-sm">Email</p>
-                  <p className="text-white">john.doe@email.com</p>
+                  <p className="text-white">dipesh.mahat@yoursolar.com</p>
                 </div>
               </div>
               
@@ -43,7 +43,7 @@ export default function ProfilePage() {
                 <Phone className="text-solar-yellow" size={20} />
                 <div>
                   <p className="text-gray-400 text-sm">Phone</p>
-                  <p className="text-white">+1 (555) 123-4567</p>
+                  <p className="text-white">+977 (98) 123-4567</p>
                 </div>
               </div>
               
@@ -51,7 +51,7 @@ export default function ProfilePage() {
                 <MapPin className="text-solar-yellow" size={20} />
                 <div>
                   <p className="text-gray-400 text-sm">Location</p>
-                  <p className="text-white">San Francisco, CA</p>
+                  <p className="text-white">Kathmandu, Nepal</p>
                 </div>
               </div>
               
@@ -59,7 +59,7 @@ export default function ProfilePage() {
                 <Calendar className="text-solar-yellow" size={20} />
                 <div>
                   <p className="text-gray-400 text-sm">Member Since</p>
-                  <p className="text-white">January 2023</p>
+                  <p className="text-white">January 2024</p>
                 </div>
               </div>
             </div>
@@ -85,11 +85,11 @@ export default function ProfilePage() {
           </div>
           <div>
             <p className="text-gray-400 mb-2">Install Date</p>
-            <p className="text-xl font-semibold text-white">March 15, 2023</p>
+            <p className="text-xl font-semibold text-white">March 15, 2024</p>
           </div>
           <div>
             <p className="text-gray-400 mb-2">Warranty Expires</p>
-            <p className="text-xl font-semibold text-white">March 15, 2048</p>
+            <p className="text-xl font-semibold text-white">March 15, 2049</p>
           </div>
           <div>
             <p className="text-gray-400 mb-2">System Status</p>
