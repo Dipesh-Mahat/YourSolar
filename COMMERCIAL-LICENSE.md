@@ -1,53 +1,89 @@
 COMMERCIAL LICENSE AGREEMENT
 ============================
 
-YourSolar - Advanced Solar Energy Management Platform
+YourSolar - Solar Energy Management Platform
 Copyright © 2024-2025 Dipesh Mahat. All rights reserved.
 
-IMPORTANT NOTICE
+DUAL LICENSING
+--------------
 
-This software is dual-licensed under:
-1. GNU AFFERO GENERAL PUBLIC LICENSE Version 3 (AGPL-3.0) - for open source use
-2. Commercial License - for proprietary/commercial use
-
-BY USING THIS SOFTWARE IN A COMMERCIAL CONTEXT WITHOUT A COMMERCIAL LICENSE, 
-YOU ARE IN VIOLATION OF COPYRIGHT LAW AND SUBJECT TO LEGAL ACTION.
+This software is available under two licenses:
+1. **AGPL-3.0** - Free for open-source projects
+2. **Commercial License** - For private/commercial use
 
 ═══════════════════════════════════════════════════════════════════════════
 
-DO YOU NEED A COMMERCIAL LICENSE?
-----------------------------------
+COMMERCIAL LICENSE TIERS
+-------------------------
 
-✅ YES, if you want to:
-   • Use YourSolar in commercial products without open-sourcing your code
-   • Keep modifications and customizations private
-   • Remove attribution and branding requirements
-   • Deploy as SaaS without sharing source code
-   • Integrate into proprietary software
-   • Resell or white-label the platform
-   • Use in closed-source business applications
+### 🎯 Personal License - $9
 
-❌ NO, if you:
-   • Open source your entire application under AGPL-3.0
-   • Share all modifications publicly
-   • Provide source code to all users (including network users)
-   • Display prominent attribution with link to YourSolar repo
+**For individual developers and personal projects**
+
+✅ What you can do:
+- Remove attribution and repo links
+- Use the code as your own project
+- Keep your modifications private
+- Deploy for personal or client work
+- Customize without restrictions
+
+❌ What you cannot do:
+- Resell or redistribute the source code
+- Create competing products for sale
+- Use for commercial SaaS platforms
+
+**Perfect for:** Freelancers, portfolio projects, client work
+
+
+### 💼 Business License - $29
+
+**Full commercial rights - it's officially yours**
+
+✅ Everything in Personal License, PLUS:
+- Resell or white-label the platform
+- Create commercial SaaS products
+- Generate unlimited revenue
+- Use in multiple commercial projects
+- Full ownership rights
+- Redistribute to clients
+
+**Perfect for:** Businesses, startups, agencies, commercial products
 
 ═══════════════════════════════════════════════════════════════════════════
 
-AGPL-3.0 OBLIGATIONS (Free Version)
-------------------------------------
+FREE VERSION (AGPL-3.0)
+-----------------------
 
-The free version requires you to:
+You can use YourSolar free if you:
+- ✅ Open-source your entire application under AGPL-3.0
+- ✅ Share all modifications publicly
+- ✅ Provide source code to all users
+- ✅ Include attribution with link to this repository
 
-🔓 DISCLOSE SOURCE CODE
-   - Make complete source code publicly available
-   - Include all modifications and derivative works
-   - Provide access to ALL users, including those using over network
+═══════════════════════════════════════════════════════════════════════════
 
-🔓 COPYLEFT LICENSE
-   - License entire application under AGPL-3.0
-   - Cannot combine with proprietary code
+PURCHASE & CONTACT
+------------------
+
+📧 **Email:** Contact via GitHub
+💬 **Support:** Open an issue on GitHub
+📄 **Invoice:** Provided upon purchase
+
+**Payment methods:** PayPal, Stripe, Bank Transfer
+
+═══════════════════════════════════════════════════════════════════════════
+
+TERMS & CONDITIONS
+------------------
+
+1. **Grant of License**: Upon payment, you receive perpetual rights as per your tier
+2. **No Warranty**: Software provided "as-is" without warranties
+3. **No Refunds**: Digital products are non-refundable after delivery
+4. **Updates**: Free updates for 1 year from purchase
+5. **Support**: Email support for license holders
+6. **Violations**: Unauthorized commercial use is copyright infringement
+
+**© 2024-2025 Dipesh Mahat. All rights reserved.**
    - All linked software must also be AGPL-3.0
 
 🔓 ATTRIBUTION
