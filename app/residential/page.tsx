@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Home, DollarSign, TrendingUp, Battery, CheckCircle } from 'lucide-react'
+import PublicNav from '@/components/PublicNav'
 
 export default function ResidentialPage() {
   const [systemSize, setSystemSize] = useState(5)
@@ -25,7 +26,9 @@ export default function ResidentialPage() {
   const results = calculateSavings()
 
   return (
-    <div className="space-y-6">
+    <div className="min-h-screen">
+      <PublicNav />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-6">
       <div>
         <h1 className="text-3xl font-bold text-white mb-2">Residential Solar Solutions</h1>
         <p className="text-gray-400">Power your home with clean, renewable energy</p>
@@ -134,6 +137,7 @@ export default function ResidentialPage() {
         <h2 className="text-2xl font-bold text-white mb-4">Ready to Go Solar?</h2>
         <p className="text-gray-300 mb-6">Get a free consultation and custom quote for your home</p>
         <button className="btn-primary">Schedule Free Consultation</button>
+      </div>
       </div>
     </div>
   )

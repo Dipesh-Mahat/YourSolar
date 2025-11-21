@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Building2, TrendingUp, Shield, Zap, CheckCircle, BarChart } from 'lucide-react'
+import PublicNav from '@/components/PublicNav'
 
 export default function CommercialPage() {
   const [businessSize, setBusinessSize] = useState(100)
@@ -28,7 +29,9 @@ export default function CommercialPage() {
   const results = calculateROI()
 
   return (
-    <div className="space-y-6">
+    <div className="min-h-screen">
+      <PublicNav />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-6">
       <div>
         <h1 className="text-3xl font-bold text-white mb-2">Commercial Solar Solutions</h1>
         <p className="text-gray-400">Reduce operational costs and enhance sustainability</p>
@@ -179,6 +182,7 @@ export default function CommercialPage() {
         <h2 className="text-2xl font-bold text-white mb-4">Transform Your Business Energy</h2>
         <p className="text-gray-300 mb-6">Schedule a site assessment and receive a detailed ROI analysis</p>
         <button className="btn-primary">Request Enterprise Quote</button>
+      </div>
       </div>
     </div>
   )

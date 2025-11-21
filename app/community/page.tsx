@@ -1,10 +1,13 @@
 'use client'
 
 import { Users, Heart, TrendingUp, Globe, MapPin, CheckCircle } from 'lucide-react'
+import PublicNav from '@/components/PublicNav'
 
 export default function CommunityPage() {
   return (
-    <div className="space-y-6">
+    <div className="min-h-screen">
+      <PublicNav />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-6">
       <div>
         <h1 className="text-3xl font-bold text-white mb-2">Community Solar Programs</h1>
         <p className="text-gray-400">Share the benefits of solar energy with your community</p>
@@ -180,9 +183,10 @@ export default function CommunityPage() {
 
       {/* CTA */}
       <div className="solar-card text-center">
-        <h2 className="text-2xl font-bold text-white mb-4">Join Your Community's Solar Future</h2>
+        <h2 className="text-2xl font-bold text-white mb-4">Join Your Community&apos;s Solar Future</h2>
         <p className="text-gray-300 mb-6">No installation, no maintenance, just clean energy savings</p>
         <button className="btn-primary">Find Projects Near You</button>
+      </div>
       </div>
     </div>
   )
