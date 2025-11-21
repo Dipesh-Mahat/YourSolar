@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Building2, TrendingUp, Shield, Zap, CheckCircle, BarChart } from 'lucide-react'
+import { Building2, TrendingUp, CheckCircle, DollarSign, Award, Leaf, Calculator } from 'lucide-react'
 import PublicNav from '@/components/PublicNav'
 
 export default function CommercialPage() {
@@ -31,31 +31,46 @@ export default function CommercialPage() {
   return (
     <div className="min-h-screen">
       <PublicNav />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-6">
-      <div>
-        <h1 className="text-3xl font-bold text-white mb-2">Commercial Solar Solutions</h1>
-        <p className="text-gray-400">Reduce operational costs and enhance sustainability</p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+      
+      {/* Header */}
+      <div className="text-center max-w-3xl mx-auto">
+        <div className="inline-flex items-center justify-center w-20 h-20 bg-solar-yellow/10 rounded-2xl mb-6">
+          <Building2 className="w-10 h-10 text-solar-yellow" />
+        </div>
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Commercial Solar Solutions</h1>
+        <p className="text-xl text-gray-300">Empower your business with sustainable energy. Reduce operating costs, enhance brand reputation, and achieve sustainability goals.</p>
       </div>
 
-      {/* Benefits */}
+      {/* Key Benefits for Businesses */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {[
-          { icon: TrendingUp, title: 'High ROI', desc: '300-500% over 25 years' },
-          { icon: Shield, title: 'Tax Benefits', desc: 'Up to 30% federal credit' },
-          { icon: Zap, title: 'Energy Independence', desc: 'Reduce grid dependency' },
-          { icon: BarChart, title: 'Scalable', desc: '50 kW to 5 MW systems' },
-        ].map((benefit, index) => (
-          <div key={index} className="solar-card">
-            <benefit.icon className="w-10 h-10 text-solar-yellow mb-3" />
-            <h3 className="text-lg font-bold text-white mb-1">{benefit.title}</h3>
+          { icon: DollarSign, title: 'Reduce OpEx', desc: 'Cut energy costs by up to 70% annually' },
+          { icon: TrendingUp, title: 'Fast ROI', desc: 'Average payback period of 4-6 years' },
+          { icon: Award, title: 'Tax Benefits', desc: 'Qualify for federal and state incentives' },
+          { icon: Leaf, title: 'Sustainability', desc: 'Meet ESG and carbon neutrality goals' },
+        ].map((benefit) => (
+          <div key={benefit.title} className="solar-card text-center">
+            <div className="inline-flex items-center justify-center w-14 h-14 bg-solar-yellow/10 rounded-xl mb-4">
+              <benefit.icon className="w-7 h-7 text-solar-yellow" />
+            </div>
+            <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3>
             <p className="text-gray-400 text-sm">{benefit.desc}</p>
           </div>
         ))}
       </div>
 
-      {/* ROI Calculator */}
+      {/* Business ROI Calculator */}
       <div className="solar-card">
-        <h2 className="text-2xl font-bold text-white mb-6">Commercial ROI Calculator</h2>
+        <div className="flex items-center gap-3 mb-6">
+          <div className="inline-flex items-center justify-center w-12 h-12 bg-solar-yellow/10 rounded-xl">
+            <Calculator className="w-6 h-6 text-solar-yellow" />
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-white">Business ROI Calculator</h2>
+            <p className="text-gray-400">Calculate your return on investment and savings</p>
+          </div>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="space-y-6">
             <div>

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Sun, Battery, Zap, TrendingUp, Users, Shield } from 'lucide-react'
+import { ArrowRight, Sun, Battery, Zap, TrendingUp, Users, Shield, Home, Building2, Globe, FileText, Calculator, BarChart3, Activity } from 'lucide-react'
 import PublicNav from '@/components/PublicNav'
 
 export default function HomePage() {
@@ -16,7 +16,7 @@ export default function HomePage() {
       title: 'Residential Solar',
       description: 'Perfect for homeowners looking to reduce energy bills and carbon footprint. Get energy independence with smart home integration.',
       href: '/residential',
-      icon: '🏠',
+      icon: Home,
       features: ['5-10 kW Systems', 'Battery Storage Options', 'Smart Home Integration', 'ROI Calculator'],
       savings: 'Save up to 70% on electricity bills',
     },
@@ -25,7 +25,7 @@ export default function HomePage() {
       title: 'Commercial Solar',
       description: 'Scalable solutions for businesses to achieve energy independence and sustainability goals with maximum ROI.',
       href: '/commercial',
-      icon: '🏢',
+      icon: Building2,
       features: ['50-500 kW Systems', 'Detailed ROI Analysis', '25-Year Warranty', 'Tax Incentives'],
       savings: 'Average payback in 4-6 years',
     },
@@ -34,7 +34,7 @@ export default function HomePage() {
       title: 'Community Solar',
       description: 'Shared solar programs for communities and neighborhoods. Benefits without rooftop installation.',
       href: '/community',
-      icon: '🌍',
+      icon: Globe,
       features: ['No Installation Needed', 'Shared Benefits', 'Flexible Subscriptions', 'Community Impact'],
       savings: 'Save 10-15% on energy costs',
     },
@@ -50,10 +50,10 @@ export default function HomePage() {
   ]
 
   const steps = [
-    { id: 'step-1', step: '01', title: 'Browse Solutions', desc: 'Explore residential, commercial, or community solar options', icon: '📋' },
-    { id: 'step-2', step: '02', title: 'Calculate ROI', desc: 'Use our interactive calculators to estimate savings and payback period', icon: '💰' },
-    { id: 'step-3', step: '03', title: 'Access Dashboard', desc: 'Login to view real-time monitoring and analytics (demo data)', icon: '📊' },
-    { id: 'step-4', step: '04', title: 'Track Performance', desc: 'Monitor energy production, battery status, and weather forecasts', icon: '⚡' },
+    { id: 'step-1', step: '01', title: 'Browse Solutions', desc: 'Explore residential, commercial, or community solar options', icon: FileText },
+    { id: 'step-2', step: '02', title: 'Calculate ROI', desc: 'Use our interactive calculators to estimate savings and payback period', icon: Calculator },
+    { id: 'step-3', step: '03', title: 'Access Dashboard', desc: 'Login to view real-time monitoring and analytics (demo data)', icon: BarChart3 },
+    { id: 'step-4', step: '04', title: 'Track Performance', desc: 'Monitor energy production, battery status, and weather forecasts', icon: Activity },
   ]
 
   return (
@@ -122,7 +122,9 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {solutions.map((solution) => (
               <Link key={solution.id} href={solution.href} className="solar-card-hover group">
-                <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">{solution.icon}</div>
+                <div className="mb-4 flex items-center justify-center w-16 h-16 bg-solar-yellow/10 rounded-2xl group-hover:bg-solar-yellow/20 transition-all">
+                  <solution.icon className="w-8 h-8 text-solar-yellow" />
+                </div>
                 <h3 className="text-2xl font-bold text-solar-yellow mb-3">{solution.title}</h3>
                 <p className="text-gray-300 mb-4">{solution.description}</p>
                 <div className="bg-solar-yellow/10 rounded-lg p-3 mb-4">
@@ -182,7 +184,9 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {steps.map((item) => (
               <div key={item.id} className="text-center">
-                <div className="text-5xl mb-4">{item.icon}</div>
+                <div className="mb-4 mx-auto flex items-center justify-center w-20 h-20 bg-solar-yellow/10 rounded-2xl">
+                  <item.icon className="w-10 h-10 text-solar-yellow" />
+                </div>
                 <div className="text-4xl font-bold text-solar-yellow mb-3">{item.step}</div>
                 <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
                 <p className="text-gray-400 text-sm">{item.desc}</p>
@@ -303,7 +307,7 @@ export default function HomePage() {
           {/* Bottom */}
           <div className="pt-8 border-t border-solar-gray-light text-center">
             <p className="text-gray-500 text-sm">
-              © 2025 YourSolar by Dipesh Mahat. Made in Kathmandu, Nepal 🇳🇵
+              © 2025 YourSolar by Dipesh Mahat
             </p>
             <p className="text-gray-600 text-xs mt-2">
               Demo platform for educational purposes • Open source under AGPL-3.0

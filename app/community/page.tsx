@@ -1,40 +1,37 @@
 'use client'
 
-import { Users, Heart, TrendingUp, Globe, MapPin, CheckCircle } from 'lucide-react'
+import { Users, Heart, TrendingUp, Globe, MapPin, CheckCircle, DollarSign, Shield, Leaf } from 'lucide-react'
 import PublicNav from '@/components/PublicNav'
 
 export default function CommunityPage() {
   return (
     <div className="min-h-screen">
       <PublicNav />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-6">
-      <div>
-        <h1 className="text-3xl font-bold text-white mb-2">Community Solar Programs</h1>
-        <p className="text-gray-400">Share the benefits of solar energy with your community</p>
-      </div>
-
-      {/* Hero Banner */}
-      <div className="solar-card bg-gradient-to-r from-solar-gray-dark to-solar-gray-medium">
-        <div className="flex items-center gap-4 mb-4">
-          <Globe className="w-16 h-16 text-solar-yellow" />
-          <div>
-            <h2 className="text-2xl font-bold text-white">Power Your Neighborhood</h2>
-            <p className="text-gray-300">Join a community solar project and save 10-20% on electricity</p>
-          </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+      
+      {/* Header */}
+      <div className="text-center max-w-3xl mx-auto">
+        <div className="inline-flex items-center justify-center w-20 h-20 bg-solar-yellow/10 rounded-2xl mb-6">
+          <Globe className="w-10 h-10 text-solar-yellow" />
         </div>
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Community Solar Programs</h1>
+        <p className="text-xl text-gray-300">Join your neighbors in harnessing clean energy. Enjoy solar benefits without rooftop panels—perfect for renters, homeowners, and businesses.</p>
       </div>
 
-      {/* Benefits */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* Key Benefits */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {[
-          { icon: Users, title: 'No Rooftop Needed', desc: 'Perfect for renters and apartment dwellers' },
-          { icon: TrendingUp, title: 'Guaranteed Savings', desc: 'Lock in lower energy rates' },
-          { icon: Heart, title: 'Community Impact', desc: 'Support local clean energy projects' },
-        ].map((benefit, index) => (
-          <div key={index} className="solar-card">
-            <benefit.icon className="w-12 h-12 text-solar-yellow mb-4" />
-            <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
-            <p className="text-gray-400">{benefit.desc}</p>
+          { icon: Users, title: 'No Installation', desc: 'Perfect for renters and apartment dwellers' },
+          { icon: DollarSign, title: 'Save 10-15%', desc: 'Reduce your electricity bills immediately' },
+          { icon: Shield, title: 'Flexible Plans', desc: 'Subscribe and cancel anytime' },
+          { icon: Leaf, title: 'Local Impact', desc: 'Support clean energy in your community' },
+        ].map((benefit) => (
+          <div key={benefit.title} className="solar-card text-center">
+            <div className="inline-flex items-center justify-center w-14 h-14 bg-solar-yellow/10 rounded-xl mb-4">
+              <benefit.icon className="w-7 h-7 text-solar-yellow" />
+            </div>
+            <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3>
+            <p className="text-gray-400 text-sm">{benefit.desc}</p>
           </div>
         ))}
       </div>

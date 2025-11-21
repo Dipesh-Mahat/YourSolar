@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Home, DollarSign, TrendingUp, Battery, CheckCircle } from 'lucide-react'
+import { Home, DollarSign, TrendingUp, Battery, CheckCircle, Zap, Shield, Leaf, Sun, Calculator } from 'lucide-react'
 import PublicNav from '@/components/PublicNav'
 
 export default function ResidentialPage() {
@@ -28,30 +28,46 @@ export default function ResidentialPage() {
   return (
     <div className="min-h-screen">
       <PublicNav />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-6">
-      <div>
-        <h1 className="text-3xl font-bold text-white mb-2">Residential Solar Solutions</h1>
-        <p className="text-gray-400">Power your home with clean, renewable energy</p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+      
+      {/* Header */}
+      <div className="text-center max-w-3xl mx-auto">
+        <div className="inline-flex items-center justify-center w-20 h-20 bg-solar-yellow/10 rounded-2xl mb-6">
+          <Home className="w-10 h-10 text-solar-yellow" />
+        </div>
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Residential Solar Solutions</h1>
+        <p className="text-xl text-gray-300">Transform your home into a clean energy powerhouse. Save money, increase property value, and reduce your carbon footprint.</p>
       </div>
 
-      {/* Benefits */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* Key Benefits */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {[
-          { icon: DollarSign, title: 'Save Money', desc: 'Reduce your electricity bills by up to 75%' },
-          { icon: TrendingUp, title: 'Increase Value', desc: 'Boost your home value by 4-6%' },
-          { icon: Battery, title: 'Energy Independence', desc: 'Power your home day and night' },
-        ].map((benefit, index) => (
-          <div key={index} className="solar-card">
-            <benefit.icon className="w-12 h-12 text-solar-yellow mb-4" />
-            <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
-            <p className="text-gray-400">{benefit.desc}</p>
+          { icon: DollarSign, title: 'Save Up to 70%', desc: 'Dramatically reduce your monthly electricity bills' },
+          { icon: TrendingUp, title: 'Boost Home Value', desc: 'Increase property value by 4-6% on average' },
+          { icon: Battery, title: '24/7 Power', desc: 'Energy independence with battery backup' },
+          { icon: Leaf, title: 'Go Green', desc: 'Reduce your carbon footprint significantly' },
+        ].map((benefit) => (
+          <div key={benefit.title} className="solar-card text-center">
+            <div className="inline-flex items-center justify-center w-14 h-14 bg-solar-yellow/10 rounded-xl mb-4">
+              <benefit.icon className="w-7 h-7 text-solar-yellow" />
+            </div>
+            <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3>
+            <p className="text-gray-400 text-sm">{benefit.desc}</p>
           </div>
         ))}
       </div>
 
-      {/* Calculator */}
+      {/* ROI Calculator */}
       <div className="solar-card">
-        <h2 className="text-2xl font-bold text-white mb-6">Solar Savings Calculator</h2>
+        <div className="flex items-center gap-3 mb-6">
+          <div className="inline-flex items-center justify-center w-12 h-12 bg-solar-yellow/10 rounded-xl">
+            <Calculator className="w-6 h-6 text-solar-yellow" />
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-white">Solar Savings Calculator</h2>
+            <p className="text-gray-400">Estimate your potential savings and ROI</p>
+          </div>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="space-y-6">
             <div>
