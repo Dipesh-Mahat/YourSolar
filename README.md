@@ -58,7 +58,7 @@ Visit `http://localhost:3000`
 ### Commercial Licenses
 
 | License | Price | What You Get |
-|---------|-------|--------------||
+|---------|-------|--------------|
 | 🎯 **Personal License** | **$9** | Remove attribution, use as your own project, keep code private |
 | 💼 **Business License** | **$29** | Full commercial rights, resell, white-label, earn revenue - it's officially yours |
 
