@@ -1,0 +1,152 @@
+═══════════════════════════════════════════════════════════════════════════
+
+GNU AFFERO GENERAL PUBLIC LICENSE
+Version 3, 19 November 2007
+
+YourSolar - Advanced Solar Energy Management Platform
+Copyright (C) 2024-2025 Dipesh Mahat
+
+═══════════════════════════════════════════════════════════════════════════
+
+DUAL-LICENSE NOTICE
+
+This software is available under TWO licenses:
+
+1. GNU AFFERO GENERAL PUBLIC LICENSE v3.0 (AGPL-3.0) - FREE for open source
+2. COMMERCIAL LICENSE - For proprietary/commercial use
+
+By using this software, you agree to comply with the terms of one of these
+licenses. If you do not obtain a commercial license, the AGPL-3.0 terms
+automatically apply.
+
+═══════════════════════════════════════════════════════════════════════════
+
+AGPL-3.0 LICENSE SUMMARY
+
+This is a FREE and OPEN SOURCE license with STRONG COPYLEFT requirements:
+
+✓ You CAN:
+  • Use the software for any purpose
+  • Study and modify the source code
+  • Distribute copies
+  • Distribute modified versions
+
+✗ You MUST:
+  • Disclose your complete source code
+  • License your entire work under AGPL-3.0
+  • Provide source to ALL users (including network users)
+  • Include copyright and license notices
+  • State all modifications made
+  • Use the same license for derivative works
+
+⚠️ CRITICAL: Network Use = Distribution
+If users interact with your software over a network (web, API, etc.), you
+MUST provide them access to your complete source code. This applies to:
+- Web applications
+- SaaS platforms
+- APIs and web services
+- Internal company tools
+- Mobile app backends
+
+═══════════════════════════════════════════════════════════════════════════
+
+COMMERCIAL LICENSE OPTION
+
+Want to use YourSolar WITHOUT the AGPL-3.0 restrictions?
+
+Get a COMMERCIAL LICENSE to:
+• Keep your source code private
+• Use in proprietary/commercial products
+• Deploy SaaS without sharing code
+• Remove attribution requirements
+• Receive priority support
+
+PRICING:
+🎓 Student License: $9 (one-time)
+💼 Startup License: $19 (one-time)  
+🏢 Business License: $29 (one-time)
+
+Contact: https://github.com/Dipesh-Mahat/YourSolar/issues
+Details: See COMMERCIAL-LICENSE.md file
+
+═══════════════════════════════════════════════════════════════════════════
+
+FULL AGPL-3.0 LICENSE TEXT
+
+Copyright (C) 2024-2025 Dipesh Mahat
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+═══════════════════════════════════════════════════════════════════════════
+
+ADDITIONAL TERMS UNDER AGPL-3.0 SECTION 7
+
+The following additional terms apply under AGPL-3.0 Section 7:
+
+a) Attribution Requirement:
+   You must retain all copyright notices and provide prominent attribution
+   to "YourSolar by Dipesh Mahat" with a link to:
+   https://github.com/Dipesh-Mahat/YourSolar
+
+b) Network Disclosure:
+   If you run a modified version on a server and let others interact with
+   it remotely, you must provide them with access to the complete source
+   code of your modified version.
+
+c) Commercial Use Restriction:
+   If you use this software in a commercial context (including SaaS, 
+   internal business tools, or revenue-generating applications), and you
+   do NOT want to comply with AGPL-3.0's source code disclosure requirements,
+   you MUST obtain a commercial license.
+
+═══════════════════════════════════════════════════════════════════════════
+
+ENFORCEMENT
+
+Violation of this license is COPYRIGHT INFRINGEMENT and will result in:
+
+1. Immediate cease-and-desist notice
+2. Invoice for retroactive licensing fees (2x standard commercial rate)
+3. Legal action for damages and legal fees
+4. Public disclosure of violation
+
+We actively monitor for unlicensed commercial use.
+
+═══════════════════════════════════════════════════════════════════════════
+
+NO WARRANTY
+
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+═══════════════════════════════════════════════════════════════════════════
+
+QUESTIONS?
+
+• Full AGPL-3.0 text: https://www.gnu.org/licenses/agpl-3.0.html
+• Commercial licensing: See COMMERCIAL-LICENSE.md
+• Support: https://github.com/Dipesh-Mahat/YourSolar/issues
+
+═══════════════════════════════════════════════════════════════════════════
+
+YourSolar - Professional Solar Energy Management Platform
+Built by Dipesh Mahat • Licensed under AGPL-3.0 + Commercial License
+
+═══════════════════════════════════════════════════════════════════════════
